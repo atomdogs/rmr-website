@@ -40,7 +40,7 @@ export function MobileMenu() {
         }`}
       >
         {/* Additional solid background overlay to ensure visibility */}
-        <div className="absolute inset-0 bg-black backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-md" />
         <nav className="relative flex flex-col items-center justify-center h-full space-y-8 z-10">
           <Link
             href="/"
