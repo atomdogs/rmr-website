@@ -11,7 +11,7 @@ export function MobileMenu() {
       {/* Hamburger button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden relative z-[110] p-2"
+        className="md:hidden relative z-[150] p-2"
         aria-label="Toggle menu"
       >
         <div className="w-6 h-5 flex flex-col justify-between">
@@ -35,13 +35,13 @@ export function MobileMenu() {
 
       {/* Mobile menu overlay */}
       <div
-        className={`fixed inset-0 bg-[#1c1c1b] z-[100] transition-transform duration-300 md:hidden ${
+        className={`fixed inset-0 z-[140] transition-transform duration-300 md:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Additional solid background overlay to ensure visibility */}
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-md" />
-        <nav className="relative flex flex-col items-center justify-center h-full space-y-8 z-10">
+        <div className="absolute inset-0 bg-black/90 backdrop-blur-md" />
+        <nav className="relative flex flex-col items-center justify-center h-full space-y-8 px-6 pt-20">
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
