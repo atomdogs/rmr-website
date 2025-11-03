@@ -39,7 +39,7 @@ export function MobileMenu() {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <nav className="flex flex-col items-center justify-center h-full space-y-8 px-6">
+        <nav className="flex flex-col items-center justify-start h-full space-y-6 px-6 pt-32 overflow-y-auto">
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
