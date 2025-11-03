@@ -35,13 +35,11 @@ export function MobileMenu() {
 
       {/* Mobile menu overlay */}
       <div
-        className={`fixed inset-0 z-[140] transition-transform duration-300 md:hidden ${
+        className={`fixed inset-0 bg-black/95 backdrop-blur-md z-[140] transition-transform duration-300 md:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Additional solid background overlay to ensure visibility */}
-        <div className="absolute inset-0 bg-black/90 backdrop-blur-md" />
-        <nav className="relative flex flex-col items-center justify-center h-full space-y-8 px-6 pt-20">
+        <nav className="flex flex-col items-center justify-center h-full space-y-8 px-6">
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
