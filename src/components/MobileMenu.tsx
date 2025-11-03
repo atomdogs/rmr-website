@@ -35,7 +35,7 @@ export function MobileMenu() {
 
       {/* Mobile menu overlay - completely covers screen when open */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black z-[150] md:hidden">
+       <div className="fixed inset-0 z-[150] md:hidden" style={{backgroundColor: 'rgba(0, 0, 0, 0.95)'}}>
           <nav className="flex flex-col items-center justify-center min-h-screen space-y-8 py-20">
             <Link
               href="/"
