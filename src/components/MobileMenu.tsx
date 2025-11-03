@@ -39,7 +39,9 @@ export function MobileMenu() {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <nav className="flex flex-col items-center justify-center h-full space-y-8">
+        {/* Additional solid background overlay to ensure visibility */}
+        <div className="absolute inset-0 bg-black/95 backdrop-blur-md" />
+        <nav className="relative flex flex-col items-center justify-center h-full space-y-8 z-10">
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
