@@ -20,31 +20,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black/60" />
         
-                  Home
-                </Link>
-                <Link href="/about" className="hover:text-white transition-colors">
-                  About
-                </Link>
-                <a href="#services" className="hover:text-white transition-colors">
-                  Services
-                </a>
-                <Link href="/portfolio" className="hover:text-white transition-colors">
-                  Portfolio
-                </Link>
-                <Link href="/contact" className="hover:text-white transition-colors">
-                  Contact
-                </Link>
-                <Link href="/team" className="hover:text-white transition-colors">
-                  Team
-                </Link>
-              </nav>
-              
-              {/* Mobile Menu - shown only on mobile */}
-              <MobileMenu />
-            </div>
-          </div>
-        </header>
-
+                  
         {/* Hero Content */}
         <div className="container mx-auto px-6 pt-40 pb-20 relative z-10">
           <div className="max-w-4xl">
