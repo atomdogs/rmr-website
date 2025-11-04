@@ -2,7 +2,7 @@
 
 import { ContactModal } from "@/components/ContactModal";
 import Link from "next/link";
-import { MobileMenu } from "@/components/MobileMenu";
+
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useState } from "react";
 
@@ -19,22 +19,7 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-black/60" />
-        {/* Header/Navigation */}
-        <header className="fixed top-0 left-0 right-0 z-50 bg-[#1c1c1b]/95 backdrop-blur-sm border-b border-white/10">
-          <div className="container mx-auto px-6 py-6 flex items-center justify-between">
-            <div className="flex items-center gap-2 md:gap-4">
-              <a href="https://rmrdevelopments.uk/" target="_blank" rel="noopener noreferrer">
-                <img src="https://ugc.same-assets.com/GDTnFO76x2BSF1_bN4R4Ib_xRQUn16-J.png" alt="RSD Logo" className="h-12 md:h-16 lg:h-20" />
-              </a>
-              <div className="border-l border-white/30 pl-2 md:pl-4">
-                <h1 className="text-sm font-light tracking-wide md:text-2xl lg:text-[47px]">RMR Site Developments</h1>
-                <p className="text-[10px] text-white/60 tracking-wide md:text-xs lg:text-[21px] lg:py-[14px]">Building Tomorrow's Communities Today</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-6 text-white/80">
-              {/* Desktop Navigation - hidden on mobile */}
-              <nav className="hidden md:flex items-center gap-8 text-base lg:text-lg">
-                <Link href="/" className="hover:text-white transition-colors">
+        
                   Home
                 </Link>
                 <Link href="/about" className="hover:text-white transition-colors">
