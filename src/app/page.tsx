@@ -1,8 +1,6 @@
 "use client";
 
 import { ContactModal } from "@/components/ContactModal";
-import Link from "next/link";
-
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useState } from "react";
 
@@ -19,8 +17,7 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-black/60" />
-        
-                  
+            
         {/* Hero Content */}
         <div className="container mx-auto px-6 pt-40 pb-20 relative z-10">
           <div className="max-w-4xl">
