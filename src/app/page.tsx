@@ -1,6 +1,7 @@
 "use client";
 
 import { ContactModal } from "@/components/ContactModal";
+import Link from "next/link";
 import { MobileMenu } from "@/components/MobileMenu";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useState } from "react";
@@ -31,6 +32,29 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center gap-6 text-white/80">
+              {/* Desktop Navigation - hidden on mobile */}
+              <nav className="hidden md:flex items-center gap-8 text-base lg:text-lg">
+                <Link href="/" className="hover:text-white transition-colors">
+                  Home
+                </Link>
+                <Link href="/about" className="hover:text-white transition-colors">
+                  About
+                </Link>
+                <a href="#services" className="hover:text-white transition-colors">
+                  Services
+                </a>
+                <Link href="/portfolio" className="hover:text-white transition-colors">
+                  Portfolio
+                </Link>
+                <Link href="/contact" className="hover:text-white transition-colors">
+                  Contact
+                </Link>
+                <Link href="/team" className="hover:text-white transition-colors">
+                  Team
+                </Link>
+              </nav>
+              
+              {/* Mobile Menu - shown only on mobile */}
               <MobileMenu />
             </div>
           </div>
