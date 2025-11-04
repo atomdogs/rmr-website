@@ -6,6 +6,31 @@ import Link from "next/link";
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const menuStyles = {
+    position: 'fixed' as const,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    backgroundColor: '#1a1a1a',
+    zIndex: 9998,
+    transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
+    transition: 'transform 0.3s ease-in-out',
+    display: 'flex',
+    flexDirection: 'column' as const,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '80px 24px 40px'
+  };
+
+  const linkStyle = {
+    fontSize: '28px',
+    fontWeight: '300',
+    color: 'white',
+    textDecoration: 'none',
+    transition: 'color 0.2s'
+  };
+
   return (
     <>
       {/* Hamburger button */}
@@ -49,78 +74,25 @@ export function MobileMenu() {
         </div>
       </button>
 
-      {/* Mobile menu - slide in from right with solid background */}
-      <div
-        style={{
-          position: 'fixed',
-          top: 0,
-          right: 0,
-          bottom: 0,
-          width: '100%',
-          backgroundColor: '#1a1a1a',
-          zIndex: 9998,
-          transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
-          transition: 'transform 0.3s ease-in-out',
-          display: window.innerWidth >= 768 ? 'none' : 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '80px 24px 40px'
-        }}
-      >
+      {/* Mobile menu - solid dark background */}
+      <div className="md:hidden" style={menuStyles}>
         <nav style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '32px', width: '100%' }}>
-          <Link
-            href="/"
-            onClick={() => setIsOpen(false)}
-            style={{ fontSize: '28px', fontWeight: '300', color: 'white', textDecoration: 'none', transition: 'color 0.2s' }}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#bc1019'}
-            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
-          >
+          <Link href="/" onClick={() => setIsOpen(false)} style={linkStyle}>
             Home
           </Link>
-          <Link
-            href="/about"
-            onClick={() => setIsOpen(false)}
-            style={{ fontSize: '28px', fontWeight: '300', color: 'white', textDecoration: 'none', transition: 'color 0.2s' }}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#bc1019'}
-            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
-          >
+          <Link href="/about" onClick={() => setIsOpen(false)} style={linkStyle}>
             About Us
           </Link>
-          <a
-            href="#services"
-            onClick={() => setIsOpen(false)}
-            style={{ fontSize: '28px', fontWeight: '300', color: 'white', textDecoration: 'none', transition: 'color 0.2s' }}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#bc1019'}
-            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
-          >
+          <a href="#services" onClick={() => setIsOpen(false)} style={linkStyle}>
             Services
           </a>
-          <Link
-            href="/portfolio"
-            onClick={() => setIsOpen(false)}
-            style={{ fontSize: '28px', fontWeight: '300', color: 'white', textDecoration: 'none', transition: 'color 0.2s' }}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#bc1019'}
-            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
-          >
+          <Link href="/portfolio" onClick={() => setIsOpen(false)} style={linkStyle}>
             Portfolio
           </Link>
-          <Link
-            href="/contact"
-            onClick={() => setIsOpen(false)}
-            style={{ fontSize: '28px', fontWeight: '300', color: 'white', textDecoration: 'none', transition: 'color 0.2s' }}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#bc1019'}
-            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
-          >
+          <Link href="/contact" onClick={() => setIsOpen(false)} style={linkStyle}>
             Contact
           </Link>
-          <Link
-            href="/team"
-            onClick={() => setIsOpen(false)}
-            style={{ fontSize: '28px', fontWeight: '300', color: 'white', textDecoration: 'none', transition: 'color 0.2s' }}
-            onMouseEnter={(e) => e.currentTarget.style.color = '#bc1019'}
-            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
-          >
+          <Link href="/team" onClick={() => setIsOpen(false)} style={linkStyle}>
             Senior Team
           </Link>
 
