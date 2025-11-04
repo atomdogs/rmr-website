@@ -8,7 +8,7 @@ export function MobileMenu() {
 
   return (
     <>
-      {/* Hamburger button - always on top */}
+      {/* Hamburger button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="md:hidden relative p-2"
@@ -22,45 +22,65 @@ export function MobileMenu() {
         </div>
       </button>
 
-      {/* Full screen menu overlay */}
+      {/* Menu overlay */}
       {isOpen && (
-        <div 
-          className="md:hidden"
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: '#000000',
-            zIndex: 9000,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '20px'
-          }}
-        >
-          <nav style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
-            <Link href="/" onClick={() => setIsOpen(false)} style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
-              Home
-            </Link>
-            <Link href="/about" onClick={() => setIsOpen(false)} style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
-              About Us
-            </Link>
-            <Link href="#services" onClick={() => setIsOpen(false)} style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
-              Services
-            </Link>
-            <Link href="/portfolio" onClick={() => setIsOpen(false)} style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
-              Portfolio
-            </Link>
-            <Link href="/contact" onClick={() => setIsOpen(false)} style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
-              Contact
-            </Link>
-            <Link href="/team" onClick={() => setIsOpen(false)} style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
-              Senior Team
-            </Link>
-          </nav>
-        </div>
+        <>
+          {/* Black background layer */}
+          <div 
+            className="md:hidden"
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: 'rgb(0, 0, 0)',
+              backgroundColor: 'rgb(0, 0, 0)',
+              zIndex: 9000,
+              opacity: 0.95
+            }}
+          />
+          
+          {/* Menu content layer */}
+          <div 
+            className="md:hidden"
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              zIndex: 9001,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingTop: '100px',
+              paddingBottom: '40px',
+              overflowY: 'auto'
+            }}
+          >
+            <nav style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '28px', width: '100%', maxWidth: '400px' }}>
+              <Link href="/" onClick={() => setIsOpen(false)} style={{ color: '#ffffff', fontSize: '26px', fontWeight: '300', textDecoration: 'none' }}>
+                Home
+              </Link>
+              <Link href="/about" onClick={() => setIsOpen(false)} style={{ color: '#ffffff', fontSize: '26px', fontWeight: '300', textDecoration: 'none' }}>
+                About Us
+              </Link>
+              <Link href="#services" onClick={() => setIsOpen(false)} style={{ color: '#ffffff', fontSize: '26px', fontWeight: '300', textDecoration: 'none' }}>
+                Services
+              </Link>
+              <Link href="/portfolio" onClick={() => setIsOpen(false)} style={{ color: '#ffffff', fontSize: '26px', fontWeight: '300', textDecoration: 'none' }}>
+                Portfolio
+              </Link>
+              <Link href="/contact" onClick={() => setIsOpen(false)} style={{ color: '#ffffff', fontSize: '26px', fontWeight: '300', textDecoration: 'none' }}>
+                Contact
+              </Link>
+              <Link href="/team" onClick={() => setIsOpen(false)} style={{ color: '#ffffff', fontSize: '26px', fontWeight: '300', textDecoration: 'none' }}>
+                Senior Team
+              </Link>
+            </nav>
+          </div>
+        </>
       )}
     </>
   );
