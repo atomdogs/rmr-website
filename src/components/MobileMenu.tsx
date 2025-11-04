@@ -6,9 +6,8 @@ import Link from "next/link";
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <>
-      {/* Hamburger button */}
+  if (!isOpen) {
+    return (
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="md:hidden relative p-2"
@@ -16,72 +15,65 @@ export function MobileMenu() {
         aria-label="Toggle menu"
       >
         <div className="w-6 h-5 flex flex-col justify-between">
-          <span className={`block h-0.5 w-full bg-white transition-all ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`block h-0.5 w-full bg-white transition-all ${isOpen ? 'opacity-0' : ''}`} />
-          <span className={`block h-0.5 w-full bg-white transition-all ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span className="block h-0.5 w-full bg-white" />
+          <span className="block h-0.5 w-full bg-white" />
+          <span className="block h-0.5 w-full bg-white" />
+        </div>
+      </button>
+    );
+  }
+
+  return (
+    <>
+      {/* Close button */}
+      <button
+        onClick={() => setIsOpen(false)}
+        className="md:hidden fixed p-2"
+        style={{ zIndex: 10000, top: '20px', right: '20px' }}
+        aria-label="Close menu"
+      >
+        <div className="w-6 h-6 relative">
+          <span className="block h-0.5 w-full bg-white absolute rotate-45" style={{ top: '12px' }} />
+          <span className="block h-0.5 w-full bg-white absolute -rotate-45" style={{ top: '12px' }} />
         </div>
       </button>
 
-      {/* Menu overlay */}
-      {isOpen && (
-        <>
-          {/* Black background layer */}
-          <div 
-            className="md:hidden"
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              background: 'rgb(0, 0, 0)',
-              backgroundColor: 'rgb(0, 0, 0)',
-              zIndex: 9000,
-              opacity: 0.95
-            }}
-          />
-          
-          {/* Menu content layer */}
-          <div 
-            className="md:hidden"
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              zIndex: 9001,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              paddingTop: '100px',
-              paddingBottom: '40px',
-              overflowY: 'auto'
-            }}
-          >
-            <nav style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '28px', width: '100%', maxWidth: '400px' }}>
-              <Link href="/" onClick={() => setIsOpen(false)} style={{ color: '#ffffff', fontSize: '26px', fontWeight: '300', textDecoration: 'none' }}>
-                Home
-              </Link>
-              <Link href="/about" onClick={() => setIsOpen(false)} style={{ color: '#ffffff', fontSize: '26px', fontWeight: '300', textDecoration: 'none' }}>
-                About Us
-              </Link>
-              <Link href="#services" onClick={() => setIsOpen(false)} style={{ color: '#ffffff', fontSize: '26px', fontWeight: '300', textDecoration: 'none' }}>
-                Services
-              </Link>
-              <Link href="/portfolio" onClick={() => setIsOpen(false)} style={{ color: '#ffffff', fontSize: '26px', fontWeight: '300', textDecoration: 'none' }}>
-                Portfolio
-              </Link>
-              <Link href="/contact" onClick={() => setIsOpen(false)} style={{ color: '#ffffff', fontSize: '26px', fontWeight: '300', textDecoration: 'none' }}>
-                Contact
-              </Link>
-              <Link href="/team" onClick={() => setIsOpen(false)} style={{ color: '#ffffff', fontSize: '26px', fontWeight: '300', textDecoration: 'none' }}>
-                Senior Team
-              </Link>
-            </nav>
+      {/* Full screen black menu */}
+      <div 
+        className="md:hidden fixed"
+        style={{
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          backgroundColor: 'rgba(0, 0, 0, 0.98)',
+          zIndex: 9500,
+          overflow: 'auto'
+        }}
+      >
+        <div style={{ marginTop: '150px', marginBottom: '50px', padding: '0 20px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', alignItems: 'center' }}>
+            <Link href="/" onClick={() => setIsOpen(false)} style={{ color: 'white', fontSize: '24px', display: 'block', padding: '10px', textDecoration: 'none' }}>
+              Home
+            </Link>
+            <Link href="/about" onClick={() => setIsOpen(false)} style={{ color: 'white', fontSize: '24px', display: 'block', padding: '10px', textDecoration: 'none' }}>
+              About Us
+            </Link>
+            <Link href="#services" onClick={() => setIsOpen(false)} style={{ color: 'white', fontSize: '24px', display: 'block', padding: '10px', textDecoration: 'none' }}>
+              Services
+            </Link>
+            <Link href="/portfolio" onClick={() => setIsOpen(false)} style={{ color: 'white', fontSize: '24px', display: 'block', padding: '10px', textDecoration: 'none' }}>
+              Portfolio
+            </Link>
+            <Link href="/contact" onClick={() => setIsOpen(false)} style={{ color: 'white', fontSize: '24px', display: 'block', padding: '10px', textDecoration: 'none' }}>
+              Contact
+            </Link>
+            <Link href="/team" onClick={() => setIsOpen(false)} style={{ color: 'white', fontSize: '24px', display: 'block', padding: '10px', textDecoration: 'none' }}>
+              Senior Team
+            </Link>
           </div>
-        </>
-      )}
+        </div>
+      </div>
     </>
   );
 }
