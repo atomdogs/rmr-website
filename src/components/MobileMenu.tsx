@@ -36,10 +36,9 @@ export function MobileMenu() {
       {/* Mobile menu overlay - completely covers screen when open */}
       {isOpen && (
        <div 
-          className="fixed inset-0 z-[150] md:hidden" 
+          className="fixed top-0 left-0 right-0 bottom-0 z-[150] md:hidden" 
           style={{
-            backgroundColor: '#000000',
-            opacity: 1
+            backgroundColor: 'rgba(0, 0, 0, 0.95)'
           }}
         >
           <nav className="flex flex-col items-center justify-center min-h-screen space-y-8 py-20">
