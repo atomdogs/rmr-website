@@ -11,88 +11,126 @@ export function MobileMenu() {
       {/* Hamburger button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden relative z-[200] p-2"
+        className="md:hidden p-2"
+        style={{ position: 'relative', zIndex: 9999 }}
         aria-label="Toggle menu"
       >
-        <div className="w-6 h-5 flex flex-col justify-between">
+        <div style={{ width: '24px', height: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
           <span
-            className={`block h-0.5 w-full bg-white transition-all duration-300 ${
-              isOpen ? "rotate-45 translate-y-2" : ""
-            }`}
+            style={{
+              display: 'block',
+              height: '2px',
+              width: '100%',
+              backgroundColor: 'white',
+              transition: 'all 0.3s',
+              transform: isOpen ? 'rotate(45deg) translateY(9px)' : 'none'
+            }}
           />
           <span
-            className={`block h-0.5 w-full bg-white transition-all duration-300 ${
-              isOpen ? "opacity-0" : ""
-            }`}
+            style={{
+              display: 'block',
+              height: '2px',
+              width: '100%',
+              backgroundColor: 'white',
+              transition: 'all 0.3s',
+              opacity: isOpen ? 0 : 1
+            }}
           />
           <span
-            className={`block h-0.5 w-full bg-white transition-all duration-300 ${
-              isOpen ? "-rotate-45 -translate-y-2" : ""
-            }`}
+            style={{
+              display: 'block',
+              height: '2px',
+              width: '100%',
+              backgroundColor: 'white',
+              transition: 'all 0.3s',
+              transform: isOpen ? 'rotate(-45deg) translateY(-9px)' : 'none'
+            }}
           />
         </div>
       </button>
 
-      {/* Mobile menu overlay - completely covers screen when open */}
-      {isOpen && (
-       <div 
-          className="fixed top-0 left-0 right-0 bottom-0 z-[150] md:hidden" 
-          style={{
-            backgroundColor: 'rgba(0, 0, 0, 0.95)'
-          }}
-        >
-          <nav className="flex flex-col items-center justify-center min-h-screen space-y-8 py-20">
-            <Link
-              href="/"
-              onClick={() => setIsOpen(false)}
-              className="text-3xl font-light text-white hover:text-[#bc1019] transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              onClick={() => setIsOpen(false)}
-              className="text-3xl font-light text-white hover:text-[#bc1019] transition-colors"
-            >
-              About Us
-            </Link>
-            <a
-              href="#services"
-              onClick={() => setIsOpen(false)}
-              className="text-3xl font-light text-white hover:text-[#bc1019] transition-colors"
-            >
-              Services
-            </a>
-            <Link
-              href="/portfolio"
-              onClick={() => setIsOpen(false)}
-              className="text-3xl font-light text-white hover:text-[#bc1019] transition-colors"
-            >
-              Portfolio
-            </Link>
-            <Link
-              href="/contact"
-              onClick={() => setIsOpen(false)}
-              className="text-3xl font-light text-white hover:text-[#bc1019] transition-colors"
-            >
-              Contact
-            </Link>
-            <Link
-              href="/team"
-              onClick={() => setIsOpen(false)}
-              className="text-3xl font-light text-white hover:text-[#bc1019] transition-colors"
-            >
-              Senior Team
-            </Link>
+      {/* Mobile menu - slide in from right with solid background */}
+      <div
+        style={{
+          position: 'fixed',
+          top: 0,
+          right: 0,
+          bottom: 0,
+          width: '100%',
+          backgroundColor: '#1a1a1a',
+          zIndex: 9998,
+          transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
+          transition: 'transform 0.3s ease-in-out',
+          display: window.innerWidth >= 768 ? 'none' : 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '80px 24px 40px'
+        }}
+      >
+        <nav style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '32px', width: '100%' }}>
+          <Link
+            href="/"
+            onClick={() => setIsOpen(false)}
+            style={{ fontSize: '28px', fontWeight: '300', color: 'white', textDecoration: 'none', transition: 'color 0.2s' }}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#bc1019'}
+            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+          >
+            Home
+          </Link>
+          <Link
+            href="/about"
+            onClick={() => setIsOpen(false)}
+            style={{ fontSize: '28px', fontWeight: '300', color: 'white', textDecoration: 'none', transition: 'color 0.2s' }}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#bc1019'}
+            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+          >
+            About Us
+          </Link>
+          <a
+            href="#services"
+            onClick={() => setIsOpen(false)}
+            style={{ fontSize: '28px', fontWeight: '300', color: 'white', textDecoration: 'none', transition: 'color 0.2s' }}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#bc1019'}
+            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+          >
+            Services
+          </a>
+          <Link
+            href="/portfolio"
+            onClick={() => setIsOpen(false)}
+            style={{ fontSize: '28px', fontWeight: '300', color: 'white', textDecoration: 'none', transition: 'color 0.2s' }}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#bc1019'}
+            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+          >
+            Portfolio
+          </Link>
+          <Link
+            href="/contact"
+            onClick={() => setIsOpen(false)}
+            style={{ fontSize: '28px', fontWeight: '300', color: 'white', textDecoration: 'none', transition: 'color 0.2s' }}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#bc1019'}
+            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+          >
+            Contact
+          </Link>
+          <Link
+            href="/team"
+            onClick={() => setIsOpen(false)}
+            style={{ fontSize: '28px', fontWeight: '300', color: 'white', textDecoration: 'none', transition: 'color 0.2s' }}
+            onMouseEnter={(e) => e.currentTarget.style.color = '#bc1019'}
+            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+          >
+            Senior Team
+          </Link>
 
-            <div className="pt-8 border-t border-white/20 w-64 text-center">
-              <p className="text-white/70 text-sm mb-2">Contact Info</p>
-              <p className="text-white text-sm mb-1">01603 622595</p>
-              <p className="text-white text-sm">info@rmrfacades.co.uk</p>
-            </div>
-          </nav>
-        </div>
-      )}
+          <div style={{ paddingTop: '32px', borderTop: '1px solid rgba(255, 255, 255, 0.2)', width: '256px', textAlign: 'center', marginTop: '16px' }}>
+            <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px', marginBottom: '8px' }}>Contact Info</p>
+            <p style={{ color: 'white', fontSize: '14px', marginBottom: '4px' }}>01603 622595</p>
+            <p style={{ color: 'white', fontSize: '14px' }}>info@rmrfacades.co.uk</p>
+          </div>
+        </nav>
+      </div>
     </>
   );
 }
