@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ClientBody from "./ClientBody";
 import Script from "next/script";
+import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "RMR Construction Group – Building cities and towns for tomorrow’s communities.",
+  title: "RMR Construction Group – Building cities and towns for tomorrow's communities.",
   description: "Established construction specialists delivering high-value facades, roofing, and development solutions across the UK.",
 };
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         />
       </head>
       <body suppressHydrationWarning className="antialiased">
+        <Header />
         <ClientBody>{children}</ClientBody>
       </body>
     </html>
