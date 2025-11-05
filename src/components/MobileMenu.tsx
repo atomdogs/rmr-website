@@ -75,7 +75,7 @@ export function MobileMenu() {
           >
             {/* Opaque full-screen panel */}
             <div
-              className={`absolute inset-0 bg-[#0a0a0a] transition-transform duration-300 ${
+              className={`absolute inset-0 bg-black/75 transition-transform duration-300 ${
                 isOpen ? "translate-y-0" : "translate-y-full"
               }`}
             >
