@@ -26,7 +26,14 @@ export function Header() {
         </div>
         
         <div className="flex items-center gap-6 text-white/80">
-          {/* Desktop navigation */}
+      <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm lg:text-base text-red-500">
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/about" className="hover:text-white transition-colors">About</Link>
+            <Link href="/#services" className="hover:text-white transition-colors">Services</Link>
+            <Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link>
+            <Link href="/team" className="hover:text-white transition-colors">Senior Team</Link>
+            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+          </nav>
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm lg:text-base">
             <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm lg:text-base text-red-500">
             <Link href="/about" className="hover:text-white transition-colors">About</Link>
