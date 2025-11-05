@@ -27,7 +27,7 @@ export function Header() {
         
         <div className="flex items-center gap-6 text-white/80">
           {/* Desktop Navigation */}
-          <nav className="hidden sm:flex items-center gap-6 lg:gap-8 text-sm lg:text-base">
+          <nav className="sm:flex items-center gap-6 lg:gap-8 text-sm lg:text-base">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
