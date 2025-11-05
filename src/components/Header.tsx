@@ -26,7 +26,7 @@ export function Header() {
         </div>
         
         <div className="flex items-center gap-6 text-white/80">
-          <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm lg:text-base" style={{color: '#ff0000'}}>
+         <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm lg:text-base" style={{color: '#ff0000', fontFamily: 'Arial', fontSize: '24px', fontWeight: 'bold'}}>
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <Link href="/about" className="hover:text-white transition-colors">About</Link>
             <Link href="/#services" className="hover:text-white transition-colors">Services</Link>
