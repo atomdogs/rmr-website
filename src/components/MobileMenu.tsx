@@ -40,7 +40,7 @@ export function MobileMenu() {
       {/* Hamburger button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden relative z-[110] p-2"
+        className="relative z-[110] p-2"
         aria-label="Toggle menu"
         aria-expanded={isOpen}
       >
