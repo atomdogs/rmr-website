@@ -25,17 +25,23 @@ export function Header() {
           </div>
         </div>
         
-        <div className="flex items-center gap-6 text-white/80">
-         <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm lg:text-base" style={{color: '#ff0000', fontFamily: 'Arial', fontSize: '24px', fontWeight: 'bold'}}>
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <Link href="/about" className="hover:text-white transition-colors">About</Link>
-            <Link href="/#services" className="hover:text-white transition-colors">Services</Link>
-            <Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link>
-            <Link href="/team" className="hover:text-white transition-colors">Senior Team</Link>
-            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
-          </nav>
+        <div className="flex items-center">
+          {/* Simple desktop navigation - always visible on larger screens */}
+          <div className="hidden sm:block">
+            <div className="flex items-center gap-6 lg:gap-8 text-sm lg:text-base text-white/80">
+              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              <Link href="/about" className="hover:text-white transition-colors">About</Link>
+              <Link href="/#services" className="hover:text-white transition-colors">Services</Link>
+              <Link href="/portfolio" className="hover:text-white transition-colors">Portfolio</Link>
+              <Link href="/team" className="hover:text-white transition-colors">Team</Link>
+              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+            </div>
+          </div>
           
-          <MobileMenu />
+          {/* Mobile hamburger - only on small screens */}
+          <div className="sm:hidden">
+            <MobileMenu />
+          </div>
         </div>
       </div>
     </header>
