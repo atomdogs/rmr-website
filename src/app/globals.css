@@ -78,3 +78,7 @@
     letter-spacing: -0.02em;
   }
 }
+/* Force nav elements to display flex */
+nav {
+  display: flex !important;
+}
