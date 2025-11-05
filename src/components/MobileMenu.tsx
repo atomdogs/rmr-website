@@ -69,7 +69,7 @@ export function MobileMenu() {
           <div
             role="dialog"
             aria-modal="true"
-            className={`fixed inset-0 z-[9999] md:hidden ${
+            className={`fixed inset-0 z-[9999] ${
               isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
             } transition-opacity duration-200`}
           >
