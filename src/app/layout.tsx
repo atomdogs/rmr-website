@@ -57,6 +57,8 @@ export default function RootLayout({
           <input type="text" name="company" />
           <select name="subject">
             <option value="">Select a subject</option>
+            <option value="airspace">AirSpace</option>
+            <option value="fire-remediation">Fire Remediation</option>
             <option value="rainscreen">Rainscreen Cladding</option>
             <option value="composite">Composite Roofing</option>
             <option value="windows">Windows & Curtain Walling</option>
