@@ -91,9 +91,15 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               {submitMessage}
             </div>
           ) : (
-            <form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true" className="space-y-6">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
               <input type="hidden" name="form-name" value="contact" />
-              
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
