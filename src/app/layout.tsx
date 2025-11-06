@@ -38,9 +38,9 @@ export default function RootLayout({
           <textarea name="message"></textarea>
           <select name="bestTime">
             <option value="">Anytime</option>
-            <option value="morning">Morning (9am–12pm)</option>
-            <option value="afternoon">Afternoon (12pm–3pm)</option>
-            <option value="late-afternoon">Late afternoon (3pm–6pm)</option>
+            <option value="Morning (9am–12pm)">Morning (9am–12pm)</option>
+            <option value="Afternoon (12pm–3pm)">Afternoon (12pm–3pm)</option>
+            <option value="Late afternoon (3pm–6pm)">Late afternoon (3pm–6pm)</option>
           </select>
         </form>
         <ClientBody>{children}</ClientBody>
