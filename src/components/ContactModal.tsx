@@ -18,35 +18,53 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
-
-  const requiresBestTime = () =>
-    /\b(call|phone|ring|contact back)\b/i.test(formData.message) ||
-    (formData.message.length > 0 && formData.message.toLowerCase().includes("call"));
+  const [isSuccess, setIsSuccess] = useState(false);
 
   if (!isOpen) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitMessage("");
 
-    if (requiresBestTime() && !formData.bestTime) {
-      setSubmitMessage("Please select your best time to call back.");
+    try {
+      // Submit to Netlify Forms
+      const formBody = new URLSearchParams({
+        "form-name": "contact",
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        message: formData.message,
+        bestTime: formData.bestTime || "Anytime",
+      }).toString();
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formBody,
+      });
+
+      if (response.ok) {
+        setIsSuccess(true);
+        setSubmitMessage("Thanks! We've received your message and will be in touch soon.");
+        
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setFormData({ name: "", email: "", phone: "", company: "", message: "", bestTime: "" });
+          setSubmitMessage("");
+          setIsSuccess(false);
+          onClose();
+        }, 3000);
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      setIsSuccess(false);
+      setSubmitMessage("Sorry, there was an error sending your message. Please try again or email us directly at info@rmrfacades.co.uk");
+    } finally {
       setIsSubmitting(false);
-      return;
     }
-
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    setSubmitMessage("Thanks! We’ve received your message and will call you back soon.");
-    setIsSubmitting(false);
-
-    // Reset form after 2 seconds
-    setTimeout(() => {
-      setFormData({ name: "", email: "", phone: "", company: "", message: "", bestTime: "" });
-      setSubmitMessage("");
-      onClose();
-    }, 2000);
   };
 
   return (
@@ -55,7 +73,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors z-10"
           aria-label="Close modal"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,11 +87,13 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
           <p className="text-gray-600 mb-6">Fill out the form below and we'll get back to you shortly.</p>
 
           {submitMessage ? (
-            <div className="bg-green-50 border border-green-200 text-green-800 px-6 py-4 rounded-lg text-center">
+            <div className={`${isSuccess ? 'bg-green-50 border-green-200 text-green-800' : 'bg-red-50 border-red-200 text-red-800'} border px-6 py-4 rounded-lg text-center`}>
               {submitMessage}
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true" className="space-y-6">
+              <input type="hidden" name="form-name" value="contact" />
+              
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -82,6 +102,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -97,6 +118,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -114,6 +136,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   <input
                     type="tel"
                     id="phone"
+                    name="phone"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bc1019] focus:border-transparent outline-none transition-all"
@@ -128,6 +151,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   <input
                     type="text"
                     id="company"
+                    name="company"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bc1019] focus:border-transparent outline-none transition-all"
@@ -142,6 +166,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   required
                   rows={5}
                   value={formData.message}
@@ -157,15 +182,15 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 </label>
                 <select
                   id="bestTime"
+                  name="bestTime"
                   value={formData.bestTime}
                   onChange={(e) => setFormData({ ...formData, bestTime: e.target.value })}
-                  aria-required={requiresBestTime()}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bc1019] focus:border-transparent outline-none transition-all"
                 >
                   <option value="">Anytime</option>
-                  <option value="morning">Morning (9am–12pm)</option>
-                  <option value="afternoon">Afternoon (12pm–3pm)</option>
-                  <option value="late-afternoon">Late afternoon (3pm–6pm)</option>
+                  <option value="Morning (9am–12pm)">Morning (9am–12pm)</option>
+                  <option value="Afternoon (12pm–3pm)">Afternoon (12pm–3pm)</option>
+                  <option value="Late afternoon (3pm–6pm)">Late afternoon (3pm–6pm)</option>
                 </select>
               </div>
 
