@@ -243,8 +243,7 @@ export default function Home() {
                   "RMR delivered an exceptional rainscreen cladding installation on our commercial development. Professional from start to finish."
                 </p>
                 <div>
-                  <p className="font-semibold">James Mitchell</p>
-                  <p className="text-sm text-gray-600">Project Manager, Cambridge Developments</p>
+                  <p className="font-semibold">Network Rail</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -262,8 +261,7 @@ export default function Home() {
                   "The curtain walling system RMR installed has transformed our building. Quality workmanship and excellent project management."
                 </p>
                 <div>
-                  <p className="font-semibold">Sarah Thompson</p>
-                  <p className="text-sm text-gray-600">Director, Norfolk Properties Ltd</p>
+                 <p className="font-semibold">St Crispins Place, Norwich</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -278,11 +276,10 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 italic">
-                  "We've worked with RMR on multiple projects. Their expertise in metal roofing is second to none. Highly recommended."
+                  "We've worked with RMR on multiple projects. Their expertise in Airspace/ pitch roofing systems is second to none. Highly recommended."
                 </p>
                 <div>
-                  <p className="font-semibold">David Roberts</p>
-                  <p className="text-sm text-gray-600">Contracts Manager, Essex Construction</p>
+                 <p className="font-semibold">Enfield Council - London</p>
                 </div>
               </div>
             </ScrollReveal>
