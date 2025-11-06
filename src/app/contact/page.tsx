@@ -20,6 +20,7 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitMessage("");
 
     // Simple validation: require bestTime when subject is general or quote
     const mustProvideBestTime = formData.subject === "general" || formData.subject === "quote";
@@ -29,17 +30,41 @@ export default function Contact() {
       return;
     }
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      // Submit to Netlify Forms
+      const formBody = new URLSearchParams({
+        "form-name": "contact-page",
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        subject: formData.subject,
+        message: formData.message,
+        bestTime: formData.bestTime || "Anytime",
+      }).toString();
 
-    setSubmitMessage("Thank you for contacting us! We'll be in touch within 24 hours.");
-    setIsSubmitting(false);
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formBody,
+      });
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "", bestTime: "" });
-      setSubmitMessage("");
-    }, 3000);
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      setSubmitMessage("Thank you for contacting us! We'll be in touch within 24 hours.");
+      setIsSubmitting(false);
+
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "", bestTime: "" });
+        setSubmitMessage("");
+      }, 3000);
+    } catch (error) {
+      setSubmitMessage("Sorry, there was an error sending your message. Please try again or email us directly at info@rmrfacades.co.uk");
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -131,7 +156,15 @@ export default function Contact() {
                   {submitMessage}
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                  name="contact-page"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                >
+                  <input type="hidden" name="form-name" value="contact-page" />
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                       Name *
@@ -139,6 +172,7 @@ export default function Contact() {
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -155,7 +189,8 @@ export default function Contact() {
                       <input
                         type="email"
                         id="email"
-                        required
+                      name="email"
+                      required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bc1019] focus:border-transparent outline-none transition-all"
@@ -170,7 +205,8 @@ export default function Contact() {
                       <input
                         type="tel"
                         id="phone"
-                        value={formData.phone}
+                      name="phone"
+                      value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bc1019] focus:border-transparent outline-none transition-all"
                         placeholder="01603 622595"
@@ -185,6 +221,7 @@ export default function Contact() {
                     <input
                       type="text"
                       id="company"
+                      name="company"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bc1019] focus:border-transparent outline-none transition-all"
@@ -197,7 +234,8 @@ export default function Contact() {
                       Subject *
                     </label>
                     <select
-                      id="subject"
+                       id="subject"
+                      name="subject"
                       required
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
@@ -220,7 +258,8 @@ export default function Contact() {
                       Best time to call back{(formData.subject === "general" || formData.subject === "quote") ? " *" : ""}
                     </label>
                     <select
-                      id="bestTime"
+                     id="bestTime"
+                      name="bestTime"
                       value={formData.bestTime}
                       onChange={(e) => setFormData({ ...formData, bestTime: e.target.value })}
                       aria-required={formData.subject === "general" || formData.subject === "quote"}
@@ -239,6 +278,7 @@ export default function Contact() {
                     </label>
                     <textarea
                       id="message"
+                      name="message"
                       required
                       rows={6}
                       value={formData.message}
