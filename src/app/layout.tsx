@@ -23,7 +23,26 @@ export default function RootLayout({
         />
       </head>
       <body suppressHydrationWarning className="antialiased">
-        <Header />
+        {/* Hidden form for Netlify Forms detection - do not remove */}
+        <form
+          name="contact"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          hidden
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="tel" name="phone" />
+          <input type="text" name="company" />
+          <textarea name="message"></textarea>
+          <select name="bestTime">
+            <option value="">Anytime</option>
+            <option value="morning">Morning (9am–12pm)</option>
+            <option value="afternoon">Afternoon (12pm–3pm)</option>
+            <option value="late-afternoon">Late afternoon (3pm–6pm)</option>
+          </select>
+        </form>
         <ClientBody>{children}</ClientBody>
       </body>
     </html>
