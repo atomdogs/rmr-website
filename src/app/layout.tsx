@@ -43,6 +43,37 @@ export default function RootLayout({
             <option value="Late afternoon (3pm–6pm)">Late afternoon (3pm–6pm)</option>
           </select>
         </form>
+        {/* Hidden form for Contact Page - do not remove */}
+        <form
+          name="contact-page"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          hidden
+        >
+          <input type="hidden" name="form-name" value="contact-page" />
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="tel" name="phone" />
+          <input type="text" name="company" />
+          <select name="subject">
+            <option value="">Select a subject</option>
+            <option value="rainscreen">Rainscreen Cladding</option>
+            <option value="composite">Composite Roofing</option>
+            <option value="windows">Windows & Curtain Walling</option>
+            <option value="metal">Metal Roofing</option>
+            <option value="standing">Standing Seam Roofing</option>
+            <option value="flat">Flat Roofing</option>
+            <option value="general">General Enquiry</option>
+            <option value="quote">Request a Quote</option>
+          </select>
+          <select name="bestTime">
+            <option value="">Anytime</option>
+            <option value="morning">Morning (9am–12pm)</option>
+            <option value="afternoon">Afternoon (12pm–3pm)</option>
+            <option value="late-afternoon">Late afternoon (3pm–6pm)</option>
+          </select>
+          <textarea name="message"></textarea>
+        </form>
         <ClientBody>{children}</ClientBody>
       </body>
     </html>
