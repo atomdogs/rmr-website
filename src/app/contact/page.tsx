@@ -242,6 +242,8 @@ export default function Contact() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#bc1019] focus:border-transparent outline-none transition-all"
                     >
                       <option value="">Select a subject</option>
+                      <option value="airspace">AirSpace</option>
+                      <option value="fire-remediation">Fire Remediation</option>
                       <option value="rainscreen">Rainscreen Cladding</option>
                       <option value="composite">Composite Roofing</option>
                       <option value="windows">Windows & Curtain Walling</option>
