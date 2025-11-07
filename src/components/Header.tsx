@@ -9,23 +9,23 @@ export function Header() {
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2 md:gap-4">
           <Link href="/">
-            <img 
-              src="https://ugc.same-assets.com/GDTnFO76x2BSF1_bN4R4Ib_xRQUn16-J.png" 
-              alt="RSD Logo" 
-              className="h-12 md:h-14 lg:h-16" 
+            <img
+              src="https://ugc.same-assets.com/GDTnFO76x2BSF1_bN4R4Ib_xRQUn16-J.png"
+              alt="RSD Logo"
+              className="h-12 md:h-16 lg:h-20"
             />
           </Link>
           <div className="border-l border-white/30 pl-2 md:pl-4">
-            <h1 className="text-xs font-light tracking-wide md:text-lg lg:text-2xl text-white">
+            <h1 className="text-sm md:text-2xl lg:text-[47px] font-light tracking-wide text-white">
               RMR Site Developments
             </h1>
-            <p className="text-[8px] text-white/60 tracking-wide md:text-[10px] lg:text-sm">
+            <p className="text-[8px] md:text-[10px] lg:text-sm text-white/60 tracking-wide">
               Building Tomorrow's Communities Today
             </p>
           </div>
         </div>
-        
-        {/* Hamburger menu - always visible on all screen sizes */}
+
+        {/* Hamburger menu - visible on all screen sizes */}
         <MobileMenu />
       </div>
     </header>
