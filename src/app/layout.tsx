@@ -75,7 +75,8 @@ export default function RootLayout({
             <option value="late-afternoon">Late afternoon (3pm–6pm)</option>
           </select>
           <textarea name="message"></textarea>
-        </form>
+         </form>
+        <Header />
         <ClientBody>{children}</ClientBody>
       </body>
     </html>
