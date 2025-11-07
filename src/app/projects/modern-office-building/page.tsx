@@ -1,23 +1,7 @@
 import Link from "next/link";
-import { MobileMenu } from "@/components/MobileMenu";
-
 export default function ModernOfficeBuildingProject() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#1c1c1b]/95 backdrop-blur-sm border-b border-white/10">
-        <div className="container mx-auto px-6 py-6 flex items-center justify-between">
-          <a href="https://rmrdevelopments.uk/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4">
-            <img src="https://ugc.same-assets.com/GDTnFO76x2BSF1_bN4R4Ib_xRQUn16-J.png" alt="RSD Logo" className="h-16 md:h-20" />
-            <div className="border-l border-white/30 pl-4 hidden md:block">
-              <h1 className="text-2xl md:text-3xl font-light tracking-wide text-white">RMR Site Developments</h1>
-              <p className="text-xs text-white/60 tracking-wide">Building Tomorrow's Communities Today</p>
-            </div>
-          </a>
-          <MobileMenu />
-        </div>
-      </header>
-
       {/* Hero Image */}
       <section className="pt-24">
         <div className="w-full h-[60vh] relative">
