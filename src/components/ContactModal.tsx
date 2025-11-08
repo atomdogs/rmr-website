@@ -61,7 +61,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
       }
     } catch (error) {
       setIsSuccess(false);
-      setSubmitMessage("Sorry, there was an error sending your message. Please try again or email us directly at info@rmrfacades.co.uk");
+      setSubmitMessage("Sorry, there was an error sending your message. Please try again or email us directly at info@rmrdevelopments.uk");
     } finally {
       setIsSubmitting(false);
     }

@@ -115,7 +115,7 @@ export function MobileMenu() {
                 <div className="pt-8 border-t border-white/20 w-64">
                   <p className="text-white/70 text-sm mb-2">Contact Info</p>
                   <p className="text-white text-sm mb-1">01603 622595</p>
-                  <p className="text-white text-sm">info@rmrfacades.co.uk</p>
+                  <p className="text-white text-sm">info@rmrdevelopments.uk</p>
                 </div>
               </nav>
             </div>

@@ -142,7 +142,7 @@ export default function Portfolio() {
               Call 01603 622595
             </a>
             <a
-              href="mailto:info@rmrfacades.co.uk"
+              href="mailto:info@rmrdevelopments.uk"
               className="border-2 border-white text-white hover:bg-white hover:text-[#1c1c1b] px-8 py-4 rounded-lg font-medium transition-colors"
             >
               Email Us

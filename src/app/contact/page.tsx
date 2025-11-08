@@ -60,7 +60,7 @@ export default function Contact() {
         setSubmitMessage("");
       }, 3000);
     } catch (error) {
-      setSubmitMessage("Sorry, there was an error sending your message. Please try again or email us directly at info@rmrfacades.co.uk");
+      setSubmitMessage("Sorry, there was an error sending your message. Please try again or email us directly at info@rmrdevelopments.uk");
       setIsSubmitting(false);
     }
   };
@@ -105,8 +105,8 @@ export default function Contact() {
               </div>
               <h3 className="font-semibold mb-2">Email</h3>
               <p className="text-gray-600 mb-2">Send us a message</p>
-              <a href="mailto:info@rmrfacades.co.uk" className="text-[#bc1019] hover:underline">
-                info@rmrfacades.co.uk
+              <a href="mailto:info@rmrdevelopments.uk" className="text-[#bc1019] hover:underline">
+                info@rmrdevelopments.uk
               </a>
             </div>
 

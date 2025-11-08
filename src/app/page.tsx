@@ -403,7 +403,7 @@ export default function Home() {
               <h3 className="font-semibold mb-4 md:text-[19px]">Contact</h3>
               <p className="text-sm text-white/70 mb-2 md:text-[17px]">Head Office, Norwich, NR1 1PG</p>
               <p className="text-sm text-white/70 mb-2 md:text-[17px]">01603 622595</p>
-              <p className="text-sm text-white/70 md:text-[17px]">info@rmrgroup.co.uk</p>
+              <p className="text-sm text-white/70 md:text-[17px]">info@rmrdevelopments.uk</p>
             </div>
           </div>
 

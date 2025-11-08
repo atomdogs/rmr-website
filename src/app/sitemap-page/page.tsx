@@ -85,7 +85,7 @@ export default function SitemapPage() {
                   Phone: <a href="tel:01603622595" className="text-[#bc1019] hover:underline">01603 622595</a>
                 </p>
                 <p className="text-gray-700">
-                  Email: <a href="mailto:info@rmrfacades.co.uk" className="text-[#bc1019] hover:underline">info@rmrfacades.co.uk</a>
+                  Email: <a href="mailto:info@rmrdevelopments.uk" className="text-[#bc1019] hover:underline">info@rmrdevelopments.uk</a>
                 </p>
               </div>
             </section>

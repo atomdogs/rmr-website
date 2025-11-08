@@ -52,7 +52,7 @@ export default function PrivacyCookies() {
             <section className="mb-8">
               <h2 className="text-2xl font-light mb-4">5. Your Rights</h2>
               <p className="text-gray-700 mb-4">
-                You have the right to ask us not to process your personal data for marketing purposes. You can exercise your right to prevent such processing by contacting us at info@rmrfacades.co.uk
+                You have the right to ask us not to process your personal data for marketing purposes. You can exercise your right to prevent such processing by contacting us at info@rmrdevelopments.uk
               </p>
             </section>
 
@@ -64,7 +64,7 @@ export default function PrivacyCookies() {
               <p className="text-gray-700">
                 RMR Construction Group Limited<br />
                 Head Office, Norwich, NR1 1PG<br />
-                Email: info@rmrfacades.co.uk<br />
+                Email: info@rmrdevelopments.uk<br />
                 Phone: 01603 622595
               </p>
             </section>

@@ -62,7 +62,7 @@ export default function DataProtection() {
                 Data Protection Officer<br />
                 RMR Construction Group Limited<br />
                 Head Office, Norwich, NR1 1PG<br />
-                Email: info@rmrfacades.co.uk<br />
+                Email: info@rmrdevelopments.uk<br />
                 Phone: 01603 622595
               </p>
             </section>

@@ -169,16 +169,16 @@ export default function About() {
                     </a>
                   </p>
                   <p>
-                    <a href="mailto:info@rmrfacades.co.uk" className="text-[#bc1019] hover:underline">
-                      info@rmrfacades.co.uk
+                    <a href="mailto:info@rmrdevelopments.uk" className="text-[#bc1019] hover:underline">
+                      info@rmrdevelopments.uk
                     </a>
                   </p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-3">General Enquiries</h4>
                   <p>
-                    <a href="mailto:info@rmrgroup.co.uk" className="text-[#bc1019] hover:underline">
-                      info@rmrgroup.co.uk
+                    <a href="mailto:info@rmrdevelopments.uk" className="text-[#bc1019] hover:underline">
+                      info@rmrdevelopments.uk
                     </a>
                   </p>
                   <p className="text-gray-700 mt-4 text-sm">
@@ -206,7 +206,7 @@ export default function About() {
               Call 01603 622595
             </a>
             <a
-              href="mailto:info@rmrfacades.co.uk"
+              href="mailto:info@rmrdevelopments.uk"
               className="border-2 border-white text-white hover:bg-white hover:text-[#1c1c1b] px-8 py-4 rounded-lg font-medium transition-colors"
             >
               Email Us
