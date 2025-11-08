@@ -34,7 +34,7 @@ export default function AirspaceDevelopment() {
             {/* Image 1 */}
             <div className="my-12">
               <img 
-                src="/uploads/airspace/airspace1.jpg" 
+                src="/uploads/airspace/airspace1.png" 
                 alt="Airspace Development Project" 
                 className="w-full h-auto rounded-lg shadow-lg"
               />
