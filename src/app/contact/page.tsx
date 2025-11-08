@@ -125,7 +125,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Form & Office Info */}
-      <section className="py-20 bg-[#fbfbfb]">
+    <section id="contact-form" className="py-20 bg-[#fbfbfb]">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
