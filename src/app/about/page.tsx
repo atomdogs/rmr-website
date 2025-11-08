@@ -205,12 +205,12 @@ export default function About() {
             >
               Call 01603 622595
             </a>
-            <a
-              href="mailto:info@rmrdevelopments.uk"
-              className="border-2 border-white text-white hover:bg-white hover:text-[#1c1c1b] px-8 py-4 rounded-lg font-medium transition-colors"
+            <Link
+              href="/contact"
+              className="border-2 border-white text-white hover:bg-white hover:text-[#1c1c1b] px-8 py-4 rounded-lg font-medium transition-colors inline-block"
             >
               Email Us
-            </a>
+            </Link>
           </div>
         </div>
       </section>
