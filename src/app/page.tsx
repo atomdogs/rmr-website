@@ -178,10 +178,10 @@ export default function Home() {
                 link: '/services/fire-remediation'
               },
               {
-                title: 'Airspace Development',
-                image: 'https://ext.same-assets.com/3530247640/3197313653.jpeg',
-                link: '/services/airspace-development'
-              }
+  title: 'Airspace Development',
+  image: '/uploads/Airspace/airspace-hero.png',
+  link: '/services/airspace-development'
+}
             ].map((service, index) => (
               <ScrollReveal key={index} delay={index * 100}>
                 <a href={service.link} className="group relative overflow-hidden aspect-[4/3] rounded-lg block cursor-pointer">
