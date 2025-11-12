@@ -105,6 +105,9 @@ export function MobileMenu() {
                 <Link href="/portfolio" onClick={() => setIsOpen(false)} className="text-2xl hover:text-[#bc1019] transition-colors">
                   Portfolio
                 </Link>
+                <Link href="/news" onClick={() => setIsOpen(false)} className="text-2xl hover:text-[#bc1019] transition-colors">
+                  News
+                </Link>
                 <Link href="/contact" onClick={() => setIsOpen(false)} className="text-2xl hover:text-[#bc1019] transition-colors">
                   Contact
                 </Link>
