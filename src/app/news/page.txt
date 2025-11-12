@@ -9,17 +9,16 @@ export default function News() {
   const categories = ["All", "Projects", "Company News", "Industry News"];
 
   // News articles will be added here as they're created
-  const newsArticles = [
-    // Example structure - we'll add real articles when content is ready
-    // {
-    //   id: 1,
-    //   title: "Article Title",
-    //   category: "Projects",
-    //   date: "November 12, 2025",
-    //   excerpt: "Brief description of the article...",
-    //   image: "/uploads/news/image.jpg",
-    //   slug: "article-title"
-    // }
+   const newsArticles = [
+    {
+      id: 1,
+      title: "Fire Safety in Facades: What You Need to Know",
+      category: "Projects",
+      date: "October 21, 2025",
+      excerpt: "Fire safety in facades has never been more scrutinised – and rightly so. Since Grenfell, the entire industry has had to rethink how we design, build, and maintain building exteriors.",
+      image: "/uploads/news/firefacades-01.JPG",
+      slug: "fire-safety-in-facades"
+    }
   ];
 
   const filteredArticles = selectedCategory === "All"
