@@ -104,7 +104,7 @@ export default function SitemapPage() {
       <footer className="bg-[#0a0a0a] text-white py-12">
         <div className="container mx-auto px-6">
           <div className="text-center text-sm text-white/50">
-            <p>© 2025 RMR Construction Group Limited - All Rights Reserved.</p>
+            <p>RMR Group © Website by Bayley and Green. Copyright © 2025 RMR Group.</p>
           </div>
         </div>
       </footer>
