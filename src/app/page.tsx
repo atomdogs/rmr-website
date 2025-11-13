@@ -408,7 +408,7 @@ export default function Home() {
           </div>
 
           <div className="border-t border-white/10 pt-8 text-center text-sm text-white/50">
-            <p>© 2025 RMR Group Limited - All Rights Reserved.</p>
+            <p>RMR Group © Website by Bayley and Green. Copyright © 2025 RMR Group.</p>
           </div>
         </div>
       </footer>

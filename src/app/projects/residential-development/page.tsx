@@ -221,7 +221,7 @@ export default function ResidentialDevelopmentProject() {
       {/* Footer */}
       <footer className="bg-[#0a0a0a] text-white py-8">
         <div className="container mx-auto px-6 text-center text-sm text-white/50">
-          <p>© 2025 RMR Construction Group Limited - All Rights Reserved.</p>
+          <p>RMR Group © Website by Bayley and Green. Copyright © 2025 RMR Group.</p>
         </div>
       </footer>
     </div>
