@@ -19,18 +19,78 @@ export default function SitemapPage() {
                 <li>
                   <Link href="/" className="text-[#bc1019] hover:underline">Home</Link>
                 </li>
+                <li>
+                  <Link href="/about" className="text-[#bc1019] hover:underline">About</Link>
+                </li>
+                <li>
+                  <Link href="/team" className="text-[#bc1019] hover:underline">Team</Link>
+                </li>
+                <li>
+                  <Link href="/portfolio" className="text-[#bc1019] hover:underline">Portfolio</Link>
+                </li>
+                <li>
+                  <Link href="/news" className="text-[#bc1019] hover:underline">News</Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="text-[#bc1019] hover:underline">Contact</Link>
+                </li>
               </ul>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-light mb-4">Services</h2>
-              <ul className="space-y-2 text-gray-700">
-                <li>Rainscreen Cladding</li>
-                <li>Composite Roofing and Cladding</li>
-                <li>Windows and Curtain Walling</li>
-                <li>Metal Roofing and Cladding</li>
-                <li>Zipped Standing Seam Roofing</li>
-                <li>Flat Roofing</li>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/services/rainscreen-cladding" className="text-[#bc1019] hover:underline">Rainscreen Cladding</Link>
+                </li>
+                <li>
+                  <Link href="/services/composite-roofing" className="text-[#bc1019] hover:underline">Composite Roofing and Cladding</Link>
+                </li>
+                <li>
+                  <Link href="/services/windows-curtain-walling" className="text-[#bc1019] hover:underline">Windows and Curtain Walling</Link>
+                </li>
+                <li>
+                  <Link href="/services/metal-roofing" className="text-[#bc1019] hover:underline">Metal Roofing and Cladding</Link>
+                </li>
+                <li>
+                  <Link href="/services/standing-seam" className="text-[#bc1019] hover:underline">Zipped Standing Seam Roofing</Link>
+                </li>
+                <li>
+                  <Link href="/services/flat-roofing" className="text-[#bc1019] hover:underline">Flat Roofing</Link>
+                </li>
+                <li>
+                  <Link href="/services/airspace-development" className="text-[#bc1019] hover:underline">Airspace Development</Link>
+                </li>
+                <li>
+                  <Link href="/services/fire-remediation" className="text-[#bc1019] hover:underline">Fire Remediation</Link>
+                </li>
+              </ul>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl font-light mb-4">Projects</h2>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/projects/modern-office-building" className="text-[#bc1019] hover:underline">Modern Office Building</Link>
+                </li>
+                <li>
+                  <Link href="/projects/educational-facility" className="text-[#bc1019] hover:underline">Educational Facility</Link>
+                </li>
+                <li>
+                  <Link href="/projects/residential-development" className="text-[#bc1019] hover:underline">Residential Development</Link>
+                </li>
+              </ul>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-2xl font-light mb-4">News & Articles</h2>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/news" className="text-[#bc1019] hover:underline">News Overview</Link>
+                </li>
+                <li>
+                  <Link href="/news/fire-safety-in-facades" className="text-[#bc1019] hover:underline">Fire Safety in Facades</Link>
+                </li>
               </ul>
             </section>
 
