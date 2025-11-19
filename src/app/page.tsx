@@ -23,7 +23,7 @@ export default function Home() {
           <div className="max-w-4xl">
             <h2 className="text-5xl md:text-7xl font-light mb-8 lg:mx-[0px] lg:my-[40px] lg:px-[1px] lg:py-[9px]">Building Cities And Towns For Tomorrow's Communities.</h2>
             <p className="text-xl mb-8 text-white/80 max-w-md md:text-[29px] lg:mx-[0px] lg:py-[12px]">
-              Leading Construction Specialists In AirSpace And Fire Remediation – Delivering Comprehensive Facades, Roofing And Development Solutions Across The United Kingdom And Europe.
+              Leading Construction Specialists In AirSpace Development Solutions Across The United Kingdom And Europe.
             </p>
             <a href="#services" className="group relative overflow-hidden border-2 border-[#bc1019] px-8 py-4 rounded-full hover:bg-[#bc1019] transition-all duration-300 inline-block lg:py-[15px]">
               <span className="relative z-10 flex items-center gap-2">
