@@ -58,7 +58,8 @@ export default function RootLayout({
           <select name="subject">
   <option value="">Select a subject</option>
   <option value="New contact from RSD Website - AirSpace">AirSpace</option>
-  <option value="New contact from RSD Website - Fire Remediation">Fire Remediation</option>
+  {/* Hidden for now - Fire Remediation */}
+  {/* <option value="New contact from RSD Website - Fire Remediation">Fire Remediation</option> */}
   <option value="New contact from RSD Website - Rainscreen Cladding">Rainscreen Cladding</option>
   <option value="New contact from RSD Website - Composite Roofing">Composite Roofing</option>
   <option value="New contact from RSD Website - Windows & Curtain Walling">Windows & Curtain Walling</option>

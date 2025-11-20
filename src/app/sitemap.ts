@@ -91,12 +91,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/services/fire-remediation`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
+    // Hidden for now - Fire Remediation
+    // {
+    //   url: `${baseUrl}/services/fire-remediation`,
+    //   lastModified: new Date(),
+    //   changeFrequency: 'monthly',
+    //   priority: 0.9,
+    // },
     // Projects
     {
       url: `${baseUrl}/projects/modern-office-building`,
