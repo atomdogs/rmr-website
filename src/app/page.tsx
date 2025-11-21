@@ -172,11 +172,12 @@ export default function Home() {
                 image: 'https://ext.same-assets.com/3530247640/636894361.jpeg',
                 link: '/services/flat-roofing'
               },
-              {
-                title: 'Fire Remediation',
-                image: '/uploads/st-crispins-house.jpg',
-                link: '/services/fire-remediation'
-              },
+              // Hidden for now - Fire Remediation
+              // {
+              //   title: 'Fire Remediation',
+              //   image: '/uploads/st-crispins-house.jpg',
+              //   link: '/services/fire-remediation'
+              // },
               {
   title: 'Airspace Development',
   image: '/uploads/Airspace/airspace-hero.png',
@@ -185,30 +186,13 @@ export default function Home() {
             ].map((service, index) => (
               <ScrollReveal key={index} delay={index * 100}>
                 <a href={service.link} className="group relative overflow-hidden aspect-[4/3] rounded-lg block cursor-pointer">
-                  {service.title === 'Fire Remediation' ? (
-                    <picture>
-                      <source
-                        type="image/webp"
-                        srcSet="/uploads/fire-remediation/IMG_8461-480.webp 480w, /uploads/fire-remediation/IMG_8461-768.webp 768w, /uploads/fire-remediation/IMG_8461-1024.webp 1024w, /uploads/fire-remediation/IMG_8461-1536.webp 1536w"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
-                      />
-                      <img
-                        src="/uploads/fire-remediation/IMG_8461.jpg"
-                        alt={service.title}
-                        className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </picture>
-                  ) : (
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  )}
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end p-6">
                     <h3 className="text-white text-2xl font-light">{service.title}</h3>
                   </div>

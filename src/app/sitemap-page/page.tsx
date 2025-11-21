@@ -61,9 +61,11 @@ export default function SitemapPage() {
                 <li>
                   <Link href="/services/airspace-development" className="text-[#bc1019] hover:underline">Airspace Development</Link>
                 </li>
+                {/* Hidden for now - Fire Remediation
                 <li>
                   <Link href="/services/fire-remediation" className="text-[#bc1019] hover:underline">Fire Remediation</Link>
                 </li>
+                */}
               </ul>
             </section>
 
