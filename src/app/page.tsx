@@ -142,36 +142,37 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
-              {
-                title: 'Rainscreen Cladding',
-                image: 'https://ext.same-assets.com/3530247640/3554118270.jpeg',
-                link: '/services/rainscreen-cladding'
-              },
-              {
-                title: 'Composite Roofing and Cladding',
-                image: 'https://ext.same-assets.com/3530247640/3197313653.jpeg',
-                link: '/services/composite-roofing'
-              },
-              {
-                title: 'Windows and Curtain Walling',
-                image: 'https://ext.same-assets.com/3530247640/1706515162.jpeg',
-                link: '/services/windows-curtain-walling'
-              },
-              {
-                title: 'Metal Roofing and Cladding',
-                image: 'https://ext.same-assets.com/3530247640/2686712483.jpeg',
-                link: '/services/metal-roofing'
-              },
-              {
-                title: 'Zipped Standing Seam Roofing',
-                image: 'https://ext.same-assets.com/3530247640/2465519261.jpeg',
-                link: '/services/standing-seam'
-              },
-              {
-                title: 'Flat Roofing',
-                image: 'https://ext.same-assets.com/3530247640/636894361.jpeg',
-                link: '/services/flat-roofing'
-              },
+              // Hidden - moved to RMR Facades
+              // {
+              //   title: 'Rainscreen Cladding',
+              //   image: 'https://ext.same-assets.com/3530247640/3554118270.jpeg',
+              //   link: '/services/rainscreen-cladding'
+              // },
+              // {
+              //   title: 'Composite Roofing and Cladding',
+              //   image: 'https://ext.same-assets.com/3530247640/3197313653.jpeg',
+              //   link: '/services/composite-roofing'
+              // },
+              // {
+              //   title: 'Windows and Curtain Walling',
+              //   image: 'https://ext.same-assets.com/3530247640/1706515162.jpeg',
+              //   link: '/services/windows-curtain-walling'
+              // },
+              // {
+              //   title: 'Metal Roofing and Cladding',
+              //   image: 'https://ext.same-assets.com/3530247640/2686712483.jpeg',
+              //   link: '/services/metal-roofing'
+              // },
+              // {
+              //   title: 'Zipped Standing Seam Roofing',
+              //   image: 'https://ext.same-assets.com/3530247640/2465519261.jpeg',
+              //   link: '/services/standing-seam'
+              // },
+              // {
+              //   title: 'Flat Roofing',
+              //   image: 'https://ext.same-assets.com/3530247640/636894361.jpeg',
+              //   link: '/services/flat-roofing'
+              // },
               // Hidden for now - Fire Remediation
               // {
               //   title: 'Fire Remediation',
