@@ -104,7 +104,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Services Grid - Hidden since all services are now on separate pages or moved to other divisions */}
+      {/*
       <section id="services" className="py-32 bg-white">
         <div className="container mx-auto px-6">
           <ScrollReveal>
@@ -172,6 +173,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Testimonials */}
       <section className="py-32 bg-white">
