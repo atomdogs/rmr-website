@@ -100,7 +100,7 @@ export function MobileMenu() {
                   About Us
                 </Link>
                 <Link href="/services/airspace-development" onClick={() => setIsOpen(false)} className="text-2xl hover:text-[#bc1019] transition-colors">
-                  Services
+                  Airspace
                 </Link>
                 <Link href="/portfolio" onClick={() => setIsOpen(false)} className="text-2xl hover:text-[#bc1019] transition-colors">
                   Portfolio
