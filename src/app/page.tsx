@@ -76,38 +76,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Project Intro */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center lg:my-[5px] lg:py-[0px]">
-            <div className="order-2 md:order-1">
-              <img
-                src="/uploads/Airspace/airspace1.png"
-                alt="Airspace Development - Adding Homes Where They're Needed Most"
-                className="w-full h-[500px] object-cover shadow-2xl rounded-[6px]"
-              />
-            </div>
-            <div className="order-1 md:order-2">
-              <p className="text-[#bc1019] text-sm font-semibold mb-4 uppercase tracking-wider md:text-[30px] md:font-bold lg:text-[40px]">
-                Airspace Development
-              </p>
-              <h2 className="text-3xl font-light mb-6 leading-tight md:text-[50px] md:font-semibold">
-                Adding Homes Where They're Needed Most
-              </h2>
-              <p className="text-lg text-gray-700 mb-4 md:text-[28px] lg:text-[32px] lg:my-[14px] lg:py-[15px]">
-                Building new homes on top of existing buildings – utilising unused rooftop space to address the UK housing shortage. AirSpace development delivers additional accommodation on existing buildings, greyfield and brownfield sites, maximising the use of established infrastructure without displacing communities.
-              </p>
-              <p className="text-lg text-gray-700 mb-6 md:text-[24px] lg:text-[28px]">
-                Using modular construction, we can add up to two storeys to existing residential blocks with minimal disruption. The infrastructure is already there – transport links, utilities, schools, shops – making this a practical and cost-effective solution for councils and housing associations.
-              </p>
-              <a href="/services/airspace-development" className="inline-block bg-[#bc1019] hover:bg-[#a00e15] text-white px-8 py-3 rounded-lg font-medium transition-colors">
-                Learn More About Airspace Development
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* About Section */}
       <section id="about" className="py-32 bg-[#fbfbfb]">
         <div className="container mx-auto px-6">
@@ -185,11 +153,6 @@ export default function Home() {
               //   image: '/uploads/st-crispins-house.jpg',
               //   link: '/services/fire-remediation'
               // },
-              {
-  title: 'Airspace Development',
-  image: '/uploads/Airspace/airspace-hero.png',
-  link: '/services/airspace-development'
-}
             ].map((service, index) => (
               <ScrollReveal key={index} delay={index * 100}>
                 <a href={service.link} className="group relative overflow-hidden aspect-[4/3] rounded-lg block cursor-pointer">
