@@ -80,20 +80,13 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-start">
-            {/* Images Column - Side by side */}
-            <div className="grid grid-cols-1 gap-6">
-              <div className="grid grid-cols-2 gap-4">
-                <img
-                  src="/uploads/Airspace/airspace1.png"
-                  alt="Existing residential building before Airspace development"
-                  className="w-full h-[400px] object-cover shadow-lg rounded-lg"
-                />
-                <img
-                  src="/uploads/Airspace/airspace-hero.png"
-                  alt="Building with additional storeys added through Airspace development"
-                  className="w-full h-[400px] object-cover shadow-lg rounded-lg"
-                />
-              </div>
+            {/* Image Column */}
+            <div>
+              <img
+                src="/uploads/Airspace/airspace1.png"
+                alt="Existing residential building before Airspace development"
+                className="w-full h-[600px] object-cover shadow-lg rounded-lg"
+              />
             </div>
 
             {/* Content Column */}
