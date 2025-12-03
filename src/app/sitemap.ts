@@ -49,42 +49,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     // Services
-    {
-      url: `${baseUrl}/services/rainscreen-cladding`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/composite-roofing`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/windows-curtain-walling`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/metal-roofing`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/standing-seam`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/flat-roofing`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
+    // Hidden - moved to RMR Facades
+    // {
+    //   url: `${baseUrl}/services/rainscreen-cladding`,
+    //   lastModified: new Date(),
+    //   changeFrequency: 'monthly',
+    //   priority: 0.9,
+    // },
+    // {
+    //   url: `${baseUrl}/services/composite-roofing`,
+    //   lastModified: new Date(),
+    //   changeFrequency: 'monthly',
+    //   priority: 0.9,
+    // },
+    // {
+    //   url: `${baseUrl}/services/windows-curtain-walling`,
+    //   lastModified: new Date(),
+    //   changeFrequency: 'monthly',
+    //   priority: 0.9,
+    // },
+    // {
+    //   url: `${baseUrl}/services/metal-roofing`,
+    //   lastModified: new Date(),
+    //   changeFrequency: 'monthly',
+    //   priority: 0.9,
+    // },
+    // {
+    //   url: `${baseUrl}/services/standing-seam`,
+    //   lastModified: new Date(),
+    //   changeFrequency: 'monthly',
+    //   priority: 0.9,
+    // },
+    // {
+    //   url: `${baseUrl}/services/flat-roofing`,
+    //   lastModified: new Date(),
+    //   changeFrequency: 'monthly',
+    //   priority: 0.9,
+    // },
     {
       url: `${baseUrl}/services/airspace-development`,
       lastModified: new Date(),

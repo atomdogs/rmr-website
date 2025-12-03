@@ -40,6 +40,7 @@ export default function SitemapPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-light mb-4">Services</h2>
               <ul className="space-y-2">
+                {/* Hidden - moved to RMR Facades
                 <li>
                   <Link href="/services/rainscreen-cladding" className="text-[#bc1019] hover:underline">Rainscreen Cladding</Link>
                 </li>
@@ -58,6 +59,7 @@ export default function SitemapPage() {
                 <li>
                   <Link href="/services/flat-roofing" className="text-[#bc1019] hover:underline">Flat Roofing</Link>
                 </li>
+                */}
                 <li>
                   <Link href="/services/airspace-development" className="text-[#bc1019] hover:underline">Airspace Development</Link>
                 </li>

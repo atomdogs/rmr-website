@@ -60,12 +60,13 @@ export default function RootLayout({
   <option value="New contact from RSD Website - AirSpace">AirSpace</option>
   {/* Hidden for now - Fire Remediation */}
   {/* <option value="New contact from RSD Website - Fire Remediation">Fire Remediation</option> */}
-  <option value="New contact from RSD Website - Rainscreen Cladding">Rainscreen Cladding</option>
-  <option value="New contact from RSD Website - Composite Roofing">Composite Roofing</option>
-  <option value="New contact from RSD Website - Windows & Curtain Walling">Windows & Curtain Walling</option>
-  <option value="New contact from RSD Website - Metal Roofing">Metal Roofing</option>
-  <option value="New contact from RSD Website - Standing Seam Roofing">Standing Seam Roofing</option>
-  <option value="New contact from RSD Website - Flat Roofing">Flat Roofing</option>
+  {/* Hidden - moved to RMR Facades */}
+  {/* <option value="New contact from RSD Website - Rainscreen Cladding">Rainscreen Cladding</option> */}
+  {/* <option value="New contact from RSD Website - Composite Roofing">Composite Roofing</option> */}
+  {/* <option value="New contact from RSD Website - Windows & Curtain Walling">Windows & Curtain Walling</option> */}
+  {/* <option value="New contact from RSD Website - Metal Roofing">Metal Roofing</option> */}
+  {/* <option value="New contact from RSD Website - Standing Seam Roofing">Standing Seam Roofing</option> */}
+  {/* <option value="New contact from RSD Website - Flat Roofing">Flat Roofing</option> */}
   <option value="New contact from RSD Website - General Enquiry">General Enquiry</option>
   <option value="New contact from RSD Website - Request a Quote">Request a Quote</option>
 </select>
