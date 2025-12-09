@@ -82,7 +82,22 @@ export default function ModernSlavery() {
       {/* Footer */}
       <footer className="bg-[#0a0a0a] text-white py-12">
         <div className="container mx-auto px-6">
-          <div className="text-center text-sm text-white/50">
+          <div className="mb-8">
+            <h3 className="font-semibold mb-4">Policies</h3>
+            <ul className="space-y-2 text-sm text-white/70">
+              <li><Link href="/apprenticeships" className="hover:text-white transition-colors">Apprenticeships</Link></li>
+              <li><Link href="/privacy-cookies" className="hover:text-white transition-colors">Privacy & Cookies</Link></li>
+              <li><Link href="/data-protection" className="hover:text-white transition-colors">Data Protection</Link></li>
+              <li><Link href="/environmental" className="hover:text-white transition-colors">Environmental</Link></li>
+              <li><Link href="/health-safety" className="hover:text-white transition-colors">Health & Safety</Link></li>
+              <li><Link href="/information-security" className="hover:text-white transition-colors">Information Security</Link></li>
+              <li><Link href="/modern-slavery" className="hover:text-white transition-colors">Modern Slavery</Link></li>
+              <li><Link href="/bribery-corruption" className="hover:text-white transition-colors">Bribery & Corruption</Link></li>
+              <li><Link href="/quality" className="hover:text-white transition-colors">Quality</Link></li>
+              <li><Link href="/carbon-reduction" className="hover:text-white transition-colors">Carbon Reduction</Link></li>
+            </ul>
+          </div>
+          <div className="border-t border-white/10 pt-8 text-center text-sm text-white/50">
             <p>RMR Group © Website by Bayley and Green. Copyright © 2025 RMR Group.</p>
           </div>
         </div>
