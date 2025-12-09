@@ -377,6 +377,7 @@ export default function Home() {
             <div>
               <h3 className="font-semibold mb-4">Policies</h3>
               <ul className="space-y-2 text-sm text-white/70">
+                <li><a href="/apprenticeships" className="hover:text-white transition-colors">Apprenticeships</a></li>
                 <li><a href="/privacy-cookies" className="hover:text-white transition-colors">Privacy & Cookies</a></li>
                 <li><a href="/data-protection" className="hover:text-white transition-colors">Data Protection</a></li>
                 <li><a href="/environmental" className="hover:text-white transition-colors">Environmental</a></li>
