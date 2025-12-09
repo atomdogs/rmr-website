@@ -111,6 +111,9 @@ export default function SitemapPage() {
               <h2 className="text-2xl font-light mb-4">Policies & Compliance</h2>
               <ul className="space-y-2">
                 <li>
+                  <a href="/apprenticeships" className="text-[#bc1019] hover:underline">Apprenticeship Policy</a>
+                </li>
+                <li>
                   <a href="/privacy-cookies" className="text-[#bc1019] hover:underline">Privacy and Cookies</a>
                 </li>
                 <li>
