@@ -140,7 +140,7 @@ export default function AirspaceDevelopment() {
               Structural capacity is the first hurdle. Some buildings simply can't support additional weight without extensive and expensive reinforcement. In those cases, the economics might not stack up.
             </p>
             <p className="text-gray-700 mb-6">
-              Then there's the design challenge. Getting the new elements to integrate properly with the existing building requires experienced architects who understand both the technical constraints and the aesthetic considerations. Poor design creates eyesores that communities reject, and rightly so.
+              Then there's the design challenge. Getting the new elements to integrate properly with the existing building requires experienced architects (we do this in-house) who understand both the technical constraints and the aesthetic considerations. Poor design creates eyesores that communities reject, and rightly so.
             </p>
             <p className="text-gray-700 mb-6">
               Building regulations have become increasingly stringent, particularly around fire safety. That's entirely appropriate given what we've learned from building failures, but it does add complexity and cost to projects.
