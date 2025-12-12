@@ -1,6 +1,7 @@
 import { ScrollReveal } from '@/components/ScrollReveal'
 import { MobileMenu } from '@/components/MobileMenu'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function TeamPage() {
   const team = [
@@ -8,6 +9,7 @@ export default function TeamPage() {
       name: 'Ray Read',
       role: 'Project Director',
       org: 'RMR Site Developments Limited',
+      image: '/uploads/Senior Team/rayread.png',
       bio: `20 years experience of Airspace development, Steel fabrication & design, engineering consultancy which includes Crossrail, Tesco. Structural Engineer/Project Director with 30 years+ experience of complex builds within the public and private sectors.`,
       notable: [
         'St Pancras Station, London: Total refurbishment of the roof in collaboration with English Heritage.',
@@ -20,12 +22,14 @@ export default function TeamPage() {
       name: 'Mike Wolfers',
       role: 'Commercial Director',
       org: 'RMR Site Developments Limited',
+      image: '/uploads/Senior Team/mikewolfers.png',
       bio: `20 years of experience in the construction sector. A commercial management delivery and turnaround specialist with consultancy roles which include DHL International, Coutts Bank and VAG. Started his management career with ICI Group companies. Primary role to ensure delivery schedules are met along with commercial overview.`,
     },
     {
       name: 'Nikhil Jhangiani',
       role: 'Chief Alternative Investment Officer',
       org: 'RMR Site Development Limited',
+      image: '/uploads/Senior Team/nikhiljhangiani.png',
       bio: `Previous roles include Chief Investment Advisor Officer Ferrier Lullin & CIE SA, Geneva (previously part of UBS Group.) Credit Bank Corp SA, Union Bancaire Privee (UBP) in Geneva & New York. Nikhil is Swiss, Italian and overseas Indian citizen, speaking 6 languages. Substantial experience in global strategic investment management both in real estate and other industries.`,
     }
   ]
@@ -47,7 +51,15 @@ export default function TeamPage() {
               <ScrollReveal key={member.name} delay={i * 100}>
                 <div className="rounded-lg border border-gray-200 p-8 bg-[#fbfbfb]">
                   <div className="flex items-start gap-6">
-                    <div className="h-20 w-20 rounded-full bg-gray-200" aria-hidden />
+                    <div className="h-20 w-20 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={80}
+                        height={80}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
                     <div>
                       <h2 className="text-2xl font-semibold">{member.name}</h2>
                       <p className="text-[#bc1019] font-medium">{member.role}</p>
