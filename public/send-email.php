@@ -47,9 +47,10 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit();
 }
 
-// Recipient email - forwards to distribution list in email platform
+// Recipient emails - send directly to external addresses
 $recipients = [
-    'info@rmrdevelopments.uk'
+    'mike@rmrgroup.co.uk',
+    'nickb@rmrfacades.com'
 ];
 
 // Email subject
