@@ -29,9 +29,8 @@ export default function Contact() {
     }
 
     try {
-      // Submit to Netlify Forms
+      // Submit to PHP mail handler
       const formBody = new URLSearchParams({
-        "form-name": "contact-page",
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
@@ -41,17 +40,19 @@ export default function Contact() {
         bestTime: formData.bestTime || "Anytime",
       }).toString();
 
-      const response = await fetch("/", {
+      const response = await fetch("/send-email.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formBody,
       });
 
-      if (!response.ok) {
-        throw new Error("Form submission failed");
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Form submission failed");
       }
 
-      setSubmitMessage("Thank you for contacting us! We'll be in touch within 24 hours.");
+      setSubmitMessage(result.message || "Thank you for contacting us! We'll be in touch within 24 hours.");
       setIsSubmitting(false);
 
       // Reset form after 3 seconds
@@ -60,7 +61,7 @@ export default function Contact() {
         setSubmitMessage("");
       }, 3000);
     } catch (error) {
-      setSubmitMessage("Sorry, there was an error sending your message. Please try again or email us directly at info@rmrdevelopments.uk");
+      setSubmitMessage(error instanceof Error ? error.message : "Sorry, there was an error sending your message. Please try again or email us directly at info@rmrdevelopments.uk");
       setIsSubmitting(false);
     }
   };
@@ -143,12 +144,7 @@ export default function Contact() {
                 <form
                   onSubmit={handleSubmit}
                   className="space-y-6"
-                  name="contact-page"
-                  method="POST"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
                 >
-                  <input type="hidden" name="form-name" value="contact-page" />
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                       Name *

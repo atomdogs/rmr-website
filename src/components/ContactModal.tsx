@@ -28,27 +28,29 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
     setSubmitMessage("");
 
     try {
-      // Submit to Netlify Forms
+      // Submit to PHP mail handler
       const formBody = new URLSearchParams({
-        "form-name": "contact",
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
         company: formData.company,
+        subject: "Contact Form Submission from Modal",
         message: formData.message,
         bestTime: formData.bestTime || "Anytime",
       }).toString();
 
-      const response = await fetch("/", {
+      const response = await fetch("/send-email.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formBody,
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (response.ok && result.success) {
         setIsSuccess(true);
-        setSubmitMessage("Thanks! We've received your message and will be in touch soon.");
-        
+        setSubmitMessage(result.message || "Thanks! We've received your message and will be in touch soon.");
+
         // Reset form after 3 seconds
         setTimeout(() => {
           setFormData({ name: "", email: "", phone: "", company: "", message: "", bestTime: "" });
@@ -57,11 +59,11 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
           onClose();
         }, 3000);
       } else {
-        throw new Error("Form submission failed");
+        throw new Error(result.message || "Form submission failed");
       }
     } catch (error) {
       setIsSuccess(false);
-      setSubmitMessage("Sorry, there was an error sending your message. Please try again or email us directly at info@rmrdevelopments.uk");
+      setSubmitMessage(error instanceof Error ? error.message : "Sorry, there was an error sending your message. Please try again or email us directly at info@rmrdevelopments.uk");
     } finally {
       setIsSubmitting(false);
     }
@@ -94,12 +96,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
             <form
               onSubmit={handleSubmit}
               className="space-y-6"
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
             >
-              <input type="hidden" name="form-name" value="contact" />
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
