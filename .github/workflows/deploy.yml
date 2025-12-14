@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - claude/setup-stableint-account-01Dv6FyZMP6ANgWYSWFrmmGw
-      # Add main branch later when ready
-      # - main
+      - main
 
 jobs:
   build-and-deploy:
