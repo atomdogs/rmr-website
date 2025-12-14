@@ -33,9 +33,9 @@ export default function AirspaceDevelopment() {
 
             {/* Image 1 */}
             <div className="my-12">
-              <img 
-                src="/uploads/airspace/airspace1.png" 
-                alt="Airspace Development Project" 
+              <img
+                src="/uploads/Airspace/airspace1.png"
+                alt="Airspace Development Project"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
             </div>
@@ -64,9 +64,9 @@ export default function AirspaceDevelopment() {
 
             {/* Image 2 */}
             <div className="my-12">
-              <img 
-                src="/uploads/airspace/airspace2.jpg" 
-                alt="Modular Construction Process" 
+              <img
+                src="/uploads/Airspace/airspace2.jpg"
+                alt="Modular Construction Process"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
             </div>
@@ -111,9 +111,9 @@ export default function AirspaceDevelopment() {
 
             {/* Image 3 */}
             <div className="my-12">
-              <img 
-                src="/uploads/airspace/airspace3.jpg" 
-                alt="Completed Airspace Development" 
+              <img
+                src="/uploads/Airspace/airspace3.jpg"
+                alt="Completed Airspace Development"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
             </div>

@@ -25,7 +25,7 @@ export default function Home() {
             <p className="text-xl mb-8 text-white/80 max-w-md md:text-[29px] lg:mx-[0px] lg:py-[12px]">
               Leading Construction Specialists In AirSpace Development Solutions Across The United Kingdom And Europe.
             </p>
-            <a href="#services" className="group relative overflow-hidden border-2 border-[#bc1019] px-8 py-4 rounded-full hover:bg-[#bc1019] transition-all duration-300 inline-block lg:py-[15px]">
+            <a href="/services/airspace-development" className="group relative overflow-hidden border-2 border-[#bc1019] px-8 py-4 rounded-full hover:bg-[#bc1019] transition-all duration-300 inline-block lg:py-[15px]">
               <span className="relative z-10 flex items-center gap-2">
                 What We Do
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
