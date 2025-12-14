@@ -358,16 +358,13 @@ export default function Home() {
                   <span className="ml-2 text-white/50"></span>
                   <ul className="mt-2 ml-4 space-y-1 list-disc">
                     <li>
-                      <span>RMR Construction Group</span>
-                      <span className="ml-2 text-white/50"></span>
+                      <a href="https://www.rmrgroup.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">RMR Construction Group</a>
                     </li>
                     <li>
-                      <span>RMR Facades</span>
-                      <span className="ml-2 text-white/50"></span>
+                      <a href="https://www.rmrfacades.co.uk/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">RMR Facades</a>
                     </li>
                     <li>
-                      <span>RMR Site Developments</span>
-                      <span className="ml-2 text-white/50"></span>
+                      <a href="https://rmrdevelopments.uk/" className="hover:text-white transition-colors">RMR Site Developments</a>
                     </li>
                   </ul>
                 </li>
