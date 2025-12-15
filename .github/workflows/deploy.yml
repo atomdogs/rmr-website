@@ -28,7 +28,14 @@ jobs:
 
       - name: Copy additional files to out directory
         run: |
-          cp public/.htaccess out/.htaccess
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            # Production: Use regular .htaccess (no password protection)
+            cp public/.htaccess out/.htaccess
+          else
+            # Dev: Use password-protected .htaccess
+            cp public/dev.htaccess out/.htaccess
+            cp public/.htpasswd out/.htpasswd
+          fi
           cp public/send-email.php out/send-email.php
 
       - name: Deploy to cPanel via FTP
