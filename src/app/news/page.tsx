@@ -18,6 +18,15 @@ export default function News() {
       excerpt: "Fire safety in facades has never been more scrutinised – and rightly so. Since Grenfell, the entire industry has had to rethink how we design, build, and maintain building exteriors.",
       image: "/uploads/news/firefacades-01.JPG",
       slug: "fire-safety-in-facades"
+    },
+    {
+      id: 2,
+      title: "Managing Health and Safety on Construction Projects",
+      category: "Industry News",
+      date: "December 16, 2024",
+      excerpt: "Over the last few decades, the construction industry has put a lot of effort into improving health and safety. We've got regulations like the Health and Safety at Work Act and the CDM Regulations.",
+      image: "/uploads/news/health-safety-placeholder.jpg",
+      slug: "managing-health-safety-construction"
     }
   ];
 
