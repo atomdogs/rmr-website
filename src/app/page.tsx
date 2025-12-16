@@ -340,14 +340,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Locations (cities only) */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-light mb-2 lg:text-[83px] lg:font-semibold">Locations</h2>
-          <p className="text-gray-600 text-lg lg:text-[44px] lg:font-medium">Norwich, London, Bristol, Glasgow</p>
-        </div>
-      </section>
-
       {/* Latest Updates from LinkedIn */}
       <section className="py-20 bg-[#fbfbfb]">
         <div className="container mx-auto px-6">
@@ -398,6 +390,14 @@ export default function Home() {
               View All Updates
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Locations (cities only) */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl md:text-5xl font-light mb-2 lg:text-[83px] lg:font-semibold">Locations</h2>
+          <p className="text-gray-600 text-lg lg:text-[44px] lg:font-medium">Norwich, London, Bristol, Glasgow</p>
         </div>
       </section>
 
