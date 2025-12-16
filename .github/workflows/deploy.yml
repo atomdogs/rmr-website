@@ -3,10 +3,8 @@ name: Deploy to cPanel
 on:
   push:
     branches:
-      - claude/setup-stableint-account-01Dv6FyZMP6ANgWYSWFrmmGw
-      - claude/add-industry-news-post-CNsxm
-      # Add main branch later when ready
-      # - main
+      - 'claude/**'  # Any branch starting with claude/ deploys to dev
+      - main          # Production deployment
 
 jobs:
   build-and-deploy:
@@ -30,7 +28,18 @@ jobs:
 
       - name: Copy additional files to out directory
         run: |
-          cp public/.htaccess out/.htaccess
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            # Production: Use regular .htaccess (no password protection)
+            cp public/.htaccess out/.htaccess
+          else
+            # Dev: Use password-protected .htaccess if it exists
+            if [ -f public/dev.htaccess ]; then
+              cp public/dev.htaccess out/.htaccess
+              [ -f public/.htpasswd ] && cp public/.htpasswd out/.htpasswd
+            else
+              cp public/.htaccess out/.htaccess
+            fi
+          fi
           cp public/send-email.php out/send-email.php
 
       - name: Deploy to cPanel via FTP
@@ -40,5 +49,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
-          server-dir: /public_html/
+          server-dir: ${{ github.ref == 'refs/heads/main' && '/public_html/' || '/dev.rmrdevelopments.uk/' }}
           dangerous-clean-slate: false
