@@ -8,30 +8,32 @@ export default function Home() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   // LinkedIn posts - manually curated
+  // Update this array with your LinkedIn posts (separate from news articles)
+  // Add images to /public/uploads/linkedin/ folder
   const linkedinPosts = [
     {
       id: 1,
-      title: "Managing Health and Safety on Construction Projects",
-      excerpt: "Over the last few decades, the construction industry has put a lot of effort into improving health and safety...",
-      image: "/uploads/health-safety/health-safety-featured.png",
-      link: "/news/managing-health-safety-construction",
+      title: "Your LinkedIn Post Title Here",
+      excerpt: "Brief summary or first few lines from your LinkedIn post...",
+      image: "/uploads/linkedin/post-1.png",
+      link: "https://www.linkedin.com/posts/your-post-url",  // Link to LinkedIn post
       date: "December 16, 2024"
     },
     {
       id: 2,
-      title: "Fire Safety in Facades: What You Need to Know",
-      excerpt: "Fire safety in facades has never been more scrutinised – and rightly so. Since Grenfell, the entire industry has had to rethink...",
-      image: "/uploads/news/firefacades-01.JPG",
-      link: "/news/fire-safety-in-facades",
-      date: "October 21, 2025"
+      title: "Another LinkedIn Update",
+      excerpt: "Description of your second LinkedIn post...",
+      image: "/uploads/linkedin/post-2.png",
+      link: "https://www.linkedin.com/posts/your-post-url",
+      date: "December 10, 2024"
     },
     {
       id: 3,
-      title: "Your Next Update",
-      excerpt: "Add your next LinkedIn post here with image, headline, and excerpt...",
-      image: "/uploads/London_night_scene.jpg",
-      link: "#",
-      date: "Coming Soon"
+      title: "Latest Company News",
+      excerpt: "Third LinkedIn post excerpt here...",
+      image: "/uploads/linkedin/post-3.png",
+      link: "https://www.linkedin.com/posts/your-post-url",
+      date: "December 5, 2024"
     }
   ];
 
