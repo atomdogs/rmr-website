@@ -46,6 +46,15 @@ export default function HealthSafetyArticle() {
               We provide knowledge and support throughout every project stage. The relevant laws get followed, always. And we expect everyone involved to commit fully to that. From the people on site right up to senior management.
             </p>
 
+            {/* Image 1 */}
+            <div className="my-12">
+              <img
+                src="/uploads/health-safety/health-safety-featured.png"
+                alt="RMR Developments construction planning with safety hard hat and blueprints on site"
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+
             <h2 className="text-3xl font-light mt-12 mb-6 text-[#1c1c1b]">What Are the CDM Regulations 2015?</h2>
 
             <p className="text-gray-700 mb-6 text-lg">
@@ -114,6 +123,15 @@ export default function HealthSafetyArticle() {
               This includes training and educating all staff in their individual responsibilities.
             </p>
 
+            {/* Image 2 */}
+            <div className="my-12">
+              <img
+                src="/uploads/health-safety/health-safety-03.png"
+                alt="Construction professional in safety equipment including hard hat and hi-vis vest on building project"
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+
             <h2 className="text-3xl font-light mt-12 mb-6 text-[#1c1c1b]">The Responsibilities of Each Duty Holder</h2>
 
             <p className="text-gray-700 mb-6 text-lg">
@@ -135,6 +153,15 @@ export default function HealthSafetyArticle() {
             <p className="text-gray-700 mb-6 text-lg">
               <strong>Worker</strong> – An individual employed to carry out building work, alterations, maintenance or demolitions. They co-operate with other duty holders and report anything they see that might affect or endanger health and safety.
             </p>
+
+            {/* Image 3 */}
+            <div className="my-12">
+              <img
+                src="/uploads/health-safety/health-safety-harness.png"
+                alt="Safety harness and fall protection equipment on construction site ensuring worker safety"
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
 
             <h2 className="text-3xl font-light mt-12 mb-6 text-[#1c1c1b]">A Collaborative Approach</h2>
 

@@ -25,7 +25,7 @@ export default function News() {
       category: "Industry News",
       date: "December 16, 2024",
       excerpt: "Over the last few decades, the construction industry has put a lot of effort into improving health and safety. We've got regulations like the Health and Safety at Work Act and the CDM Regulations.",
-      image: "/uploads/news/health-safety-placeholder.jpg",
+      image: "/uploads/health-safety/health-safety-featured.png",
       slug: "managing-health-safety-construction"
     }
   ];
