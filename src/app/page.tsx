@@ -6,6 +6,35 @@ import { useState } from "react";
 
 export default function Home() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
+  // LinkedIn posts - manually curated
+  const linkedinPosts = [
+    {
+      id: 1,
+      title: "Managing Health and Safety on Construction Projects",
+      excerpt: "Over the last few decades, the construction industry has put a lot of effort into improving health and safety...",
+      image: "/uploads/health-safety/health-safety-featured.png",
+      link: "/news/managing-health-safety-construction",
+      date: "December 16, 2024"
+    },
+    {
+      id: 2,
+      title: "Fire Safety in Facades: What You Need to Know",
+      excerpt: "Fire safety in facades has never been more scrutinised – and rightly so. Since Grenfell, the entire industry has had to rethink...",
+      image: "/uploads/news/firefacades-01.JPG",
+      link: "/news/fire-safety-in-facades",
+      date: "October 21, 2025"
+    },
+    {
+      id: 3,
+      title: "Your Next Update",
+      excerpt: "Add your next LinkedIn post here with image, headline, and excerpt...",
+      image: "/uploads/London_night_scene.jpg",
+      link: "#",
+      date: "Coming Soon"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -316,6 +345,59 @@ export default function Home() {
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-light mb-2 lg:text-[83px] lg:font-semibold">Locations</h2>
           <p className="text-gray-600 text-lg lg:text-[44px] lg:font-medium">Norwich, London, Bristol, Glasgow</p>
+        </div>
+      </section>
+
+      {/* Latest Updates from LinkedIn */}
+      <section className="py-20 bg-[#fbfbfb]">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-[#bc1019] text-sm font-semibold mb-4 uppercase tracking-wider">Latest Updates</p>
+            <h2 className="text-4xl md:text-5xl font-light">Recent from LinkedIn</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {linkedinPosts.map((post, index) => (
+              <ScrollReveal key={post.id} delay={index * 100}>
+                <a
+                  href={post.link}
+                  className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 block"
+                >
+                  <div className="aspect-[16/9] overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <p className="text-xs text-gray-500 mb-2">{post.date}</p>
+                    <h3 className="text-xl font-light mb-3 text-[#1c1c1b] group-hover:text-[#bc1019] transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 line-clamp-3 mb-4">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center text-[#bc1019] font-medium text-sm">
+                      Read More
+                      <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <a
+              href="/news"
+              className="inline-block bg-[#bc1019] hover:bg-[#a00e15] text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
+            >
+              View All Updates
+            </a>
+          </div>
         </div>
       </section>
 
