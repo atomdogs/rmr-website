@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - claude/setup-stableint-account-01Dv6FyZMP6ANgWYSWFrmmGw
+      - claude/add-industry-news-post-CNsxm
       # Add main branch later when ready
       # - main
 
