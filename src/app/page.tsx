@@ -20,10 +20,10 @@ export default function Home() {
     },
     {
       id: 2,
-      title: "Fire Remediation: Integrated Façade Solutions",
-      excerpt: "Fire remediation may be urgent, but it's only part of the story. From design and engineering to installation and maintenance, RMR Facades delivers fully integrated façade systems that balance safety, performance and aesthetics.",
+      title: "Homes That Strengthen Communities",
+      excerpt: "Progress shouldn't mean pushing people out. With airspace development, it doesn't have to. Building new homes above existing structures creates opportunities without displacement, strengthening communities rather than dividing them.",
       image: "/uploads/linkedin-images/post-2.png",
-      link: "https://www.linkedin.com/feed/update/urn:li:activity:7401622723401035776",
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:7401593808817324032",
       linkText: "Keep Reading",
       date: "December 2024"
     },
