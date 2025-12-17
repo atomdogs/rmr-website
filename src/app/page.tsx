@@ -8,32 +8,33 @@ export default function Home() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   // LinkedIn posts - manually curated
-  // Update this array with your LinkedIn posts (separate from news articles)
-  // Add images to /public/uploads/linkedin/ folder
   const linkedinPosts = [
     {
       id: 1,
-      title: "Your LinkedIn Post Title Here",
-      excerpt: "Brief summary or first few lines from your LinkedIn post...",
-      image: "/uploads/linkedin/post-1.png",
-      link: "https://www.linkedin.com/posts/your-post-url",  // Link to LinkedIn post
-      date: "December 16, 2024"
+      title: "Why 'Building Up' Still Makes Sense When the Market Slows Down",
+      excerpt: "The latest data shows the UK construction sector is facing its sharpest slowdown since the pandemic, with new project starts and confidence both falling. But innovation doesn't pause when the market does.",
+      image: "/uploads/linkedin-images/post-1.png",
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:7402663072173096960",
+      linkText: "Read More",
+      date: "December 2024"
     },
     {
       id: 2,
-      title: "Another LinkedIn Update",
-      excerpt: "Description of your second LinkedIn post...",
-      image: "/uploads/linkedin/post-2.png",
-      link: "https://www.linkedin.com/posts/your-post-url",
-      date: "December 10, 2024"
+      title: "Fire Remediation: Integrated Façade Solutions",
+      excerpt: "Fire remediation may be urgent, but it's only part of the story. From design and engineering to installation and maintenance, RMR Facades delivers fully integrated façade systems that balance safety, performance and aesthetics.",
+      image: "/uploads/linkedin-images/post-2.png",
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:7401622723401035776",
+      linkText: "Keep Reading",
+      date: "December 2024"
     },
     {
       id: 3,
-      title: "Latest Company News",
-      excerpt: "Third LinkedIn post excerpt here...",
-      image: "/uploads/linkedin/post-3.png",
-      link: "https://www.linkedin.com/posts/your-post-url",
-      date: "December 5, 2024"
+      title: "UK Construction Activity Shows Sharp Decline",
+      excerpt: "The latest S&P Global data shows UK construction activity fell last month at its fastest pace since the pandemic. Uncertainty ahead of the Budget led many clients to pause or defer investment decisions.",
+      image: "/uploads/linkedin-images/post-3.png",
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:7402646898643243009",
+      linkText: "Find Out More",
+      date: "December 2024"
     }
   ];
 
@@ -355,7 +356,9 @@ export default function Home() {
               <ScrollReveal key={post.id} delay={index * 100}>
                 <a
                   href={post.link}
-                  className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 block"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full"
                 >
                   <div className="aspect-[16/9] overflow-hidden">
                     <img
@@ -364,16 +367,16 @@ export default function Home() {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
-                  <div className="p-6">
+                  <div className="p-6 flex flex-col flex-grow">
                     <p className="text-xs text-gray-500 mb-2">{post.date}</p>
-                    <h3 className="text-xl font-light mb-3 text-[#1c1c1b] group-hover:text-[#bc1019] transition-colors">
+                    <h3 className="text-xl font-light mb-3 text-[#1c1c1b] group-hover:text-[#bc1019] transition-colors min-h-[3.5rem]">
                       {post.title}
                     </h3>
-                    <p className="text-gray-600 line-clamp-3 mb-4">
+                    <p className="text-gray-600 mb-4 flex-grow line-clamp-4">
                       {post.excerpt}
                     </p>
-                    <div className="flex items-center text-[#bc1019] font-medium text-sm">
-                      Read More
+                    <div className="flex items-center text-[#bc1019] font-medium text-sm mt-auto">
+                      {post.linkText}
                       <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
