@@ -13,7 +13,7 @@ export default function Home() {
       id: 1,
       title: "Why 'Building Up' Still Makes Sense When the Market Slows Down",
       excerpt: "The latest data shows the UK construction sector is facing its sharpest slowdown since the pandemic, with new project starts and confidence both falling. But innovation doesn't pause when the market does.",
-      image: "/uploads/linkedin-images/post-1.png",
+      image: "/uploads/linkedin-images/linkedin-post-01.png",
       link: "https://www.linkedin.com/feed/update/urn:li:activity:7402663072173096960",
       linkText: "Read More",
       date: "December 2024"
@@ -22,7 +22,7 @@ export default function Home() {
       id: 2,
       title: "Homes That Strengthen Communities",
       excerpt: "Progress shouldn't mean pushing people out. With airspace development, it doesn't have to. Building new homes above existing structures creates opportunities without displacement, strengthening communities rather than dividing them.",
-      image: "/uploads/linkedin-images/post-2.png",
+      image: "/uploads/linkedin-images/linkedin-post-02.png",
       link: "https://www.linkedin.com/feed/update/urn:li:activity:7401593808817324032",
       linkText: "Keep Reading",
       date: "December 2024"
@@ -31,7 +31,7 @@ export default function Home() {
       id: 3,
       title: "UK Construction Activity Shows Sharp Decline",
       excerpt: "The latest S&P Global data shows UK construction activity fell last month at its fastest pace since the pandemic. Uncertainty ahead of the Budget led many clients to pause or defer investment decisions.",
-      image: "/uploads/linkedin-images/post-3.png",
+      image: "/uploads/linkedin-images/linkedin-post-03.png",
       link: "https://www.linkedin.com/feed/update/urn:li:activity:7402646898643243009",
       linkText: "Find Out More",
       date: "December 2024"
