@@ -6,6 +6,38 @@ import { useState } from "react";
 
 export default function Home() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
+  // LinkedIn posts - manually curated
+  const linkedinPosts = [
+    {
+      id: 1,
+      title: "Why 'Building Up' Still Makes Sense When the Market Slows Down",
+      excerpt: "The latest data shows the UK construction sector is facing its sharpest slowdown since the pandemic, with new project starts and confidence both falling. But innovation doesn't pause when the market does.",
+      image: "/uploads/linkedin-images/linkedin-post-01.png",
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:7402663072173096960",
+      linkText: "Read More",
+      date: "December 2024"
+    },
+    {
+      id: 2,
+      title: "Homes That Strengthen Communities",
+      excerpt: "Progress shouldn't mean pushing people out. With airspace development, it doesn't have to. Building new homes above existing structures creates opportunities without displacement, strengthening communities rather than dividing them.",
+      image: "/uploads/linkedin-images/linkedin-post-02.png",
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:7401593808817324032",
+      linkText: "Keep Reading",
+      date: "December 2024"
+    },
+    {
+      id: 3,
+      title: "UK Construction Activity Shows Sharp Decline",
+      excerpt: "The latest S&P Global data shows UK construction activity fell last month at its fastest pace since the pandemic. Uncertainty ahead of the Budget led many clients to pause or defer investment decisions.",
+      image: "/uploads/linkedin-images/linkedin-post-03.png",
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:7402646898643243009",
+      linkText: "Find Out More",
+      date: "December 2024"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -307,6 +339,61 @@ export default function Home() {
                 <p className="text-gray-600 leading-relaxed">{item.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Updates from LinkedIn */}
+      <section className="py-20 bg-[#fbfbfb]">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-[#bc1019] text-sm font-semibold mb-4 uppercase tracking-wider">Latest Updates</p>
+            <h2 className="text-4xl md:text-5xl font-light">Recent from LinkedIn</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {linkedinPosts.map((post, index) => (
+              <ScrollReveal key={post.id} delay={index * 100}>
+                <a
+                  href={post.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full"
+                >
+                  <div className="aspect-[16/9] overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <p className="text-xs text-gray-500 mb-2">{post.date}</p>
+                    <h3 className="text-xl font-light mb-3 text-[#1c1c1b] group-hover:text-[#bc1019] transition-colors min-h-[3.5rem]">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 flex-grow line-clamp-4">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center text-[#bc1019] font-medium text-sm mt-auto">
+                      {post.linkText}
+                      <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <a
+              href="/news"
+              className="inline-block bg-[#bc1019] hover:bg-[#a00e15] text-white px-8 py-3 rounded-full font-medium transition-colors duration-300"
+            >
+              View All Updates
+            </a>
           </div>
         </div>
       </section>
