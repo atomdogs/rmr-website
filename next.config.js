@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+// Force rebuild for news page deployment
 const nextConfig = {
   allowedDevOrigins: ["*.preview.same-app.com"],
   output: "export",
