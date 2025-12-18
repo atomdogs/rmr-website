@@ -5,6 +5,7 @@ on:
     branches:
       - 'claude/**'  # Any branch starting with claude/ deploys to dev
       - main          # Production deployment
+      - master        # Production deployment (default branch)
 
 jobs:
   build-and-deploy:
@@ -28,7 +29,7 @@ jobs:
 
       - name: Copy additional files to out directory
         run: |
-          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+          if [ "${{ github.ref }}" = "refs/heads/main" ] || [ "${{ github.ref }}" = "refs/heads/master" ]; then
             # Production: Use regular .htaccess (no password protection)
             cp public/.htaccess out/.htaccess
           else
@@ -49,5 +50,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
-          server-dir: ${{ github.ref == 'refs/heads/main' && '/public_html/' || '/dev.rmrdevelopments.uk/' }}
+          server-dir: ${{ (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master') && '/public_html/' || '/dev.rmrdevelopments.uk/' }}
           dangerous-clean-slate: false
