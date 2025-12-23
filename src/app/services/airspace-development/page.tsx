@@ -1,8 +1,58 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+const siteUrl = "https://rmrdevelopments.uk";
+const pageUrl = `${siteUrl}/services/airspace-development`;
+const heroUrl = `${siteUrl}/uploads/Airspace/airspace1.png`;
+
+export const metadata: Metadata = {
+  title: "Airspace Development | RMR Site Developments",
+  description:
+    "Airspace development: adding new homes on unused rooftop space using modular/off-site construction with minimal disruption—managing feasibility, planning and building regulations.",
+  alternates: { canonical: pageUrl },
+  openGraph: {
+    type: "website",
+    url: pageUrl,
+    title: "Airspace Development | RMR Site Developments",
+    description:
+      "Build new homes on unused rooftop space using modular/off-site construction with minimal disruption—supported by in-house design and engineering.",
+    images: [{ url: heroUrl }],
+  },
+};
 
 export default function AirspaceDevelopment() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Airspace Development",
+    provider: {
+      "@type": "Organization",
+      name: "RMR Site Developments",
+      url: siteUrl,
+    },
+    description:
+      "Airspace development services: adding new homes on unused rooftop space using modular/off-site construction with minimal disruption. We manage feasibility studies, planning, and building regulations compliance.",
+    url: pageUrl,
+    image: heroUrl,
+    areaServed: {
+      "@type": "Country",
+      name: "United Kingdom",
+    },
+    serviceType: "Construction and Development",
+    category: "Airspace Development",
+    offers: {
+      "@type": "Offer",
+      description:
+        "Feasibility studies, structural assessment, design and engineering, modular construction, planning and building regulations support for airspace development projects.",
+    },
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-[#1c1c1b] to-[#2a2a2a] text-white">
         <div className="container mx-auto px-6">
