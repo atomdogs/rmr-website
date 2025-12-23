@@ -72,6 +72,7 @@ export default function AirspaceDevelopment() {
       {
         "@type": "Service",
         "@id": `${pageUrl}#service`,
+        url: pageUrl,
         name: "Airspace Development",
         serviceType: "Airspace development (rooftop residential extensions)",
         provider: { "@id": `${siteUrl}/#rmr-site-developments` },
@@ -79,6 +80,7 @@ export default function AirspaceDevelopment() {
           { "@type": "City", name: "London" },
           { "@type": "Country", name: "United Kingdom" },
         ],
+        image: { "@id": `${pageUrl}#primaryimage` },
         description:
           "Building new homes on top of existing buildings by utilising unused rooftop space. Delivered using modular/off-site construction to reduce disruption, with feasibility checks, planning strategy and building regulations compliance.",
         audience: [
@@ -93,9 +95,9 @@ export default function AirspaceDevelopment() {
         url: pageUrl,
         name: "Airspace Development | RMR Site Developments",
         isPartOf: { "@id": `${siteUrl}/#website` },
-        about: { "@id": `${pageUrl}#service` },
         breadcrumb: { "@id": `${pageUrl}#breadcrumbs` },
         primaryImageOfPage: { "@id": `${pageUrl}#primaryimage` },
+        mainEntity: { "@id": `${pageUrl}#service` },
         inLanguage: "en-GB",
         description:
           "Adding homes where they're needed most by developing unused rooftop space with careful planning, structural checks and modern modular construction.",
