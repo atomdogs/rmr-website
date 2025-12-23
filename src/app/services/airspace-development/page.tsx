@@ -20,39 +20,92 @@ export const metadata: Metadata = {
   },
 };
 
+function JsonLd({ data }: { data: unknown }) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
 export default function AirspaceDevelopment() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Airspace Development",
-    provider: {
-      "@type": "Organization",
-      name: "RMR Site Developments",
-      url: siteUrl,
-    },
-    description:
-      "Airspace development services: adding new homes on unused rooftop space using modular/off-site construction with minimal disruption. We manage feasibility studies, planning, and building regulations compliance.",
-    url: pageUrl,
-    image: heroUrl,
-    areaServed: {
-      "@type": "Country",
-      name: "United Kingdom",
-    },
-    serviceType: "Construction and Development",
-    category: "Airspace Development",
-    offers: {
-      "@type": "Offer",
-      description:
-        "Feasibility studies, structural assessment, design and engineering, modular construction, planning and building regulations support for airspace development projects.",
-    },
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        url: siteUrl,
+        name: "RMR Site Developments",
+        inLanguage: "en-GB",
+      },
+      {
+        "@type": "Organization",
+        "@id": `${siteUrl}/#rmr-group`,
+        name: "RMR Group",
+        url: siteUrl,
+      },
+      {
+        "@type": "Organization",
+        "@id": `${siteUrl}/#rmr-site-developments`,
+        name: "RMR Site Developments",
+        url: siteUrl,
+        parentOrganization: { "@id": `${siteUrl}/#rmr-group` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumbs`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+          { "@type": "ListItem", position: 2, name: "Services", item: `${siteUrl}/services` },
+          { "@type": "ListItem", position: 3, name: "Airspace Development", item: pageUrl },
+        ],
+      },
+      {
+        "@type": "ImageObject",
+        "@id": `${pageUrl}#primaryimage`,
+        url: heroUrl,
+        contentUrl: heroUrl,
+        caption: "Airspace development: existing building and proposed rooftop extension",
+      },
+      {
+        "@type": "Service",
+        "@id": `${pageUrl}#service`,
+        name: "Airspace Development",
+        serviceType: "Airspace development (rooftop residential extensions)",
+        provider: { "@id": `${siteUrl}/#rmr-site-developments` },
+        areaServed: [
+          { "@type": "City", name: "London" },
+          { "@type": "Country", name: "United Kingdom" },
+        ],
+        description:
+          "Building new homes on top of existing buildings by utilising unused rooftop space. Delivered using modular/off-site construction to reduce disruption, with feasibility checks, planning strategy and building regulations compliance.",
+        audience: [
+          { "@type": "Audience", audienceType: "Local authorities" },
+          { "@type": "Audience", audienceType: "Housing associations" },
+          { "@type": "Audience", audienceType: "Developers" },
+        ],
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: "Airspace Development | RMR Site Developments",
+        isPartOf: { "@id": `${siteUrl}/#website` },
+        about: { "@id": `${pageUrl}#service` },
+        breadcrumb: { "@id": `${pageUrl}#breadcrumbs` },
+        primaryImageOfPage: { "@id": `${pageUrl}#primaryimage` },
+        inLanguage: "en-GB",
+        description:
+          "Adding homes where they're needed most by developing unused rooftop space with careful planning, structural checks and modern modular construction.",
+      },
+    ],
   };
 
   return (
     <div className="min-h-screen bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={jsonLd} />
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-[#1c1c1b] to-[#2a2a2a] text-white">
         <div className="container mx-auto px-6">
