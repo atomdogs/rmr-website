@@ -489,6 +489,37 @@ export default function FAQ() {
                     We're not just selling a concept - we're delivering actual projects that work for councils, housing associations, and the communities they serve.
                   </p>
                 </AccordionItem>
+
+                <AccordionItem title="Where can I learn more about airspace development?">
+                  <p>
+                    Airspace development has gained significant attention in recent years as a practical solution to the UK housing shortage.
+                    The concept is gaining recognition both in UK media and internationally.
+                  </p>
+                  <p className="mt-3">
+                    Useful resources for further reading:
+                  </p>
+                  <ul className="list-disc pl-6 mt-2 space-y-2">
+                    <li>
+                      <a href="https://www.telegraph.co.uk/money/property/house-prices/upwardly-mobile-air-space-roof-could-become-new-home/" target="_blank" rel="noopener noreferrer" className="text-[#bc1019] hover:underline">
+                        <strong>The Telegraph:</strong> "Upwardly mobile: the air space above your roof could become a new home"
+                      </a> - UK media coverage of airspace development opportunities
+                    </li>
+                    <li>
+                      <a href="https://en.wikipedia.org/wiki/Air_rights" target="_blank" rel="noopener noreferrer" className="text-[#bc1019] hover:underline">
+                        <strong>Wikipedia: Air Rights</strong>
+                      </a> - The international term for airspace development, providing broader context on how the concept works globally
+                    </li>
+                  </ul>
+                  <p className="mt-3">
+                    Internationally, the concept is known as "air rights" - particularly in the USA and other countries.
+                    In the UK, we typically refer to it as "airspace development" or rooftop extensions, but the principle remains the same:
+                    utilising the unused space above existing buildings to create new homes.
+                  </p>
+                  <p className="mt-3">
+                    These resources provide additional context and demonstrate the growing recognition of airspace development as a viable
+                    housing solution for urban areas facing land scarcity and housing pressures.
+                  </p>
+                </AccordionItem>
               </div>
             </div>
           </ScrollReveal>
