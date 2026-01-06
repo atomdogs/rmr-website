@@ -14,7 +14,7 @@ export default function FAQ() {
             ← Back to Home
           </Link>
           <h1 className="text-4xl md:text-6xl font-light mb-6">Frequently Asked Questions</h1>
-          <p className="text-xl text-white/80 max-w-3xl">
+          <p className="text-2xl text-white/80 max-w-3xl">
             Common questions about airspace development and rooftop extensions
           </p>
         </div>
@@ -27,7 +27,7 @@ export default function FAQ() {
           {/* What is Airspace Development */}
           <ScrollReveal delay={100}>
             <div className="mb-16">
-              <h2 className="text-3xl font-light mb-8 text-[#bc1019]">Understanding Airspace Development</h2>
+              <h2 className="text-4xl md:text-5xl font-light mb-8 text-[#bc1019]">Understanding Airspace Development</h2>
               <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-8">
                 <AccordionItem title="What is airspace development?">
                   <p>
@@ -93,7 +93,7 @@ export default function FAQ() {
           {/* Planning and Regulations */}
           <ScrollReveal delay={200}>
             <div className="mb-16">
-              <h2 className="text-3xl font-light mb-8 text-[#bc1019]">Planning & Regulations</h2>
+              <h2 className="text-4xl md:text-5xl font-light mb-8 text-[#bc1019]">Planning & Regulations</h2>
               <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-8">
                 <AccordionItem title="Do I need planning permission?">
                   <p>
@@ -151,7 +151,7 @@ export default function FAQ() {
           {/* Construction Process */}
           <ScrollReveal delay={300}>
             <div className="mb-16">
-              <h2 className="text-3xl font-light mb-8 text-[#bc1019]">Construction & Delivery</h2>
+              <h2 className="text-4xl md:text-5xl font-light mb-8 text-[#bc1019]">Construction & Delivery</h2>
               <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-8">
                 <AccordionItem title="How long does construction take?">
                   <p>
@@ -263,7 +263,7 @@ export default function FAQ() {
           {/* Costs and Viability */}
           <ScrollReveal delay={400}>
             <div className="mb-16">
-              <h2 className="text-3xl font-light mb-8 text-[#bc1019]">Costs & Viability</h2>
+              <h2 className="text-4xl md:text-5xl font-light mb-8 text-[#bc1019]">Costs & Viability</h2>
               <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-8">
                 <AccordionItem title="What does airspace development cost?">
                   <p>
@@ -361,7 +361,7 @@ export default function FAQ() {
           {/* Design and Quality */}
           <ScrollReveal delay={500}>
             <div className="mb-16">
-              <h2 className="text-3xl font-light mb-8 text-[#bc1019]">Design & Quality</h2>
+              <h2 className="text-4xl md:text-5xl font-light mb-8 text-[#bc1019]">Design & Quality</h2>
               <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-8">
                 <AccordionItem title="Will the new homes look out of place?">
                   <p>
@@ -440,7 +440,7 @@ export default function FAQ() {
           {/* Getting Started */}
           <ScrollReveal delay={600}>
             <div className="mb-16">
-              <h2 className="text-3xl font-light mb-8 text-[#bc1019]">Getting Started</h2>
+              <h2 className="text-4xl md:text-5xl font-light mb-8 text-[#bc1019]">Getting Started</h2>
               <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-8">
                 <AccordionItem title="How do I get started?">
                   <p>
@@ -496,12 +496,12 @@ export default function FAQ() {
           {/* Contact CTA */}
           <ScrollReveal delay={700}>
             <div className="bg-[#fbfbfb] p-8 rounded-lg mt-12">
-              <h3 className="text-2xl font-light mb-4">Still Have Questions?</h3>
-              <p className="text-gray-700 mb-6">
+              <h3 className="text-3xl md:text-4xl font-light mb-4">Still Have Questions?</h3>
+              <p className="text-gray-700 mb-6 text-lg md:text-xl">
                 If you're a local authority or housing association interested in airspace development, we'd welcome a straightforward
                 conversation about what's possible for your estates.
               </p>
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-700 mb-6 text-lg md:text-xl">
                 No hard sell, just honest assessment of whether this approach could work for your specific situation.
               </p>
               <div className="flex gap-4 flex-wrap">
@@ -533,8 +533,8 @@ export default function FAQ() {
       {/* CTA Section */}
       <section className="py-20 bg-[#1c1c1b] text-white">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-light mb-6">Ready to Explore Airspace Development?</h2>
-          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-light mb-6">Ready to Explore Airspace Development?</h2>
+          <p className="text-2xl text-white/80 mb-8 max-w-2xl mx-auto">
             Let's discuss whether your existing buildings could benefit from airspace development.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
