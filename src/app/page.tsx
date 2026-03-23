@@ -44,7 +44,7 @@ export default function Home() {
       <section className="relative min-h-screen text-white overflow-hidden">
         {/* Background image */}
         <img
-          src="/uploads/London_night_scene.jpg"
+          src="/uploads/London_night_scene.webp"
           alt="City skyline at night"
           className="absolute inset-0 w-full h-full object-cover opacity-80"
         />
@@ -115,7 +115,7 @@ export default function Home() {
             {/* Image Column */}
             <div>
               <img
-                src="/uploads/Airspace/airspace1.png"
+                src="/uploads/Airspace/airspace1.webp"
                 alt="Existing residential building before Airspace development"
                 className="w-full h-[600px] object-cover shadow-lg rounded-lg"
               />

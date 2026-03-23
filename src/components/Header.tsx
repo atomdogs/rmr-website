@@ -13,6 +13,8 @@ export function Header() {
               src="https://ugc.same-assets.com/GDTnFO76x2BSF1_bN4R4Ib_xRQUn16-J.png"
               alt="RSD Logo"
               className="h-12 md:h-16 lg:h-20"
+              width="80"
+              height="80"
             />
           </Link>
           <div className="border-l border-white/30 pl-2 md:pl-4">
