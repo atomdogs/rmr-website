@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 const siteUrl = "https://rmrdevelopments.uk";
 const pageUrl = `${siteUrl}/services/airspace-development`;
-const heroUrl = `${siteUrl}/uploads/Airspace/airspace1.png`;
+const heroUrl = `${siteUrl}/uploads/Airspace/airspace1.webp`;
 
 export const metadata: Metadata = {
   title: "Airspace Development | RMR Site Developments",
@@ -139,7 +139,7 @@ export default function AirspaceDevelopment() {
             {/* Image 1 */}
             <div className="my-12">
               <img
-                src="/uploads/Airspace/airspace1.png"
+                src="/uploads/Airspace/airspace1.webp"
                 alt="Airspace Development Project"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -170,7 +170,7 @@ export default function AirspaceDevelopment() {
             {/* Image 2 */}
             <div className="my-12">
               <img
-                src="/uploads/Airspace/airspace2.jpg"
+                src="/uploads/Airspace/airspace2.webp"
                 alt="Modular Construction Process"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -217,7 +217,7 @@ export default function AirspaceDevelopment() {
             {/* Image 3 */}
             <div className="my-12">
               <img
-                src="/uploads/Airspace/airspace3.jpg"
+                src="/uploads/Airspace/airspace3.webp"
                 alt="Completed Airspace Development"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
