@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientBody from "./ClientBody";
-import Script from "next/script";
 import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
@@ -16,12 +15,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <Script
-          crossOrigin="anonymous"
-          src="//unpkg.com/same-runtime/dist/index.global.js"
-        />
-      </head>
       <body suppressHydrationWarning className="antialiased">
         {/* Hidden form for Netlify Forms detection - do not remove */}
         <form
